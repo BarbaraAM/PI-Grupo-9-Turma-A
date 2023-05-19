@@ -258,7 +258,112 @@ public class Jogo {
 
     static void segundoDesafio() throws Exception {
 
-    }
+        Console("\n\n\n ATENÇÃO! Seu segundo desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
+				100);
+
+		Scanner entrada = new Scanner(System.in);
+
+		List<String> alternativas = new ArrayList<>();
+
+		alternativas.add("4 e 8");
+
+		alternativas.add("3 e 6");
+
+		alternativas.add("4 e 12");
+
+		alternativas.add("2 e 4");
+
+		alternativas.add("4 e 6");
+
+		// embaralha as alternativas
+
+		Collections.shuffle(alternativas);
+
+		String respostaCerta = "4 e 8";
+
+		do {
+
+			Console("As potências 2² e 2³ correspondem, respectivamente, às seguintes representações: \n",
+					TimeUnit.MILLISECONDS, 100);
+
+			for (int i = 0; i < alternativas.size(); i++) {
+
+				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+			}
+
+			String selected = entrada.nextLine();
+
+			switch (selected) {
+
+			case "a" -> {
+
+				if (alternativas.get(0).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					return;
+
+				}
+
+			}
+
+			case "b" -> {
+
+				if (alternativas.get(1).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					return;
+
+				}
+
+			}
+
+			case "c" -> {
+
+				if (alternativas.get(2).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					return;
+
+				}
+
+			}
+
+			case "d" -> {
+
+				if (alternativas.get(3).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					return;
+
+				}
+
+			}
+
+			case "e" -> {
+
+				if (alternativas.get(4).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					return;
+
+				}
+
+			}
+
+			}
+
+			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
+			// novo
+
+			Collections.shuffle(alternativas);
+
+			System.out.println("Resposta incorreta");
+
+		} while (true);
+
+	}
+
 
     static void terceiroDesafio() throws Exception {
 
@@ -275,17 +380,161 @@ public class Jogo {
     // ------------------------------------- Partes II  -------------------------------------------------------------------
     static void parteIIdestinoI() throws Exception {
 
-        System.out.print("TESTE P VER SE CHEGOU NO DESTINO I");
+		Scanner entrada = new Scanner(System.in);
+		int escolhaIIdestinoI;
 
-    }
+		do {
+			Console("\n Passaram-se os dias e cada vez mais tropas chegam ao acampamento. "
+					+ "\n\n Contente com o exército aumentando, Daenerys decide fazer uma festa ao estilo Dothraki, povo que apoiou o início de sua jornada como rainha.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Com todos alegres, dançando, cantando e comendo em volta da fogueira, a herdeira do trono de ferro passa a temer o que está por vir."
+					+ "\n Afinal, em uma guerra, não sabemos até quando os bons momentos irão durar.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Durante a festa, Daenerys percebe a ausência de Olenna e vai em busca da aliada.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Ao ver a mulher sentada em frente ao lago, Daenerys questiona:\n - O que está havendo, Olenna?",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Olenna responde: \n - Recebi informações de que Cersei está reunindo tropas, deveríamos ter atacado quando tivemos oportunidade.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Daenerys reafirma a sua decisão: \n - Com os recursos que conseguimos e as tropas que se aproximam, poderemos atacá-los em brev…",
+				 TimeUnit.MICROSECONDS, 50);
+
+			Console("\n\n Daenerys é interrompida com gritos e fumaça, sem entender se levanta, quando o cavaleiro Sor Jorah, seu protetor, aparece puxando-a e correndo."
+					+ "\n\n Seguidos por Olenna, param atrás de uma das barracas e Jorah explica: \n Estamos sendo atacados pelo leste, enviei uma tropa para o combate, temos que nos preparar para partir.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Daenerys então pergunta: \n - Qual o tamanho da força ofensiva? Estamos em grande número, precisamos pensar melhor.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n Então Olenna aconselha: \n - Devemos retaliar enquanto podemos! Fomos pegos de surpresa, mas não despreparados, minhas tropas estão a postos no perímetro norte, podemos atacar pelas laterais.",
+					TimeUnit.MICROSECONDS, temp_narrativa);
+
+			Console("\n\n - [1] Partir ou [2] Retaliar!", TimeUnit.MILLISECONDS, temp_dialog);
+
+			escolhaIIdestinoI = entrada.nextInt();
+
+			if (escolhaIIdestinoI == 1) {
+				numTerritorios += 10;
+
+				Console("Boa escolha, partir te fez poupar recursos e adquirir 10 pontos! \n Placar: "
+						+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+				segundoDesafio();
+				parteIIIdestinoI();
+
+				break;
+
+			} else if (escolhaIIdestinoI == 2) {
+				numTerritorios += 30;
+
+				Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 30 pontos! \n Placar: "
+						+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+				segundoDesafio();
+				parteIIIdestinoII();
+
+				break;
+
+			} else {
+				System.out.println("Você não digitou uma resposta válida!");
+
+			}
+		} while (escolhaIIdestinoI != 1 || escolhaIIdestinoI != 2);
+
+	}
+
 
     static void parteIIdestinoII() throws Exception {
 
-        System.out.print("TESTE P VER SE CHEGOU NO DESTINO II");
+        Scanner entrada = new Scanner(System.in);
+		int escolhaIIdestinoII;
 
-    }
+		do {
+		Console("\n Após uma batalha muito árdua e grandes perdas, Daenerys se via no momento de se recompor."
+				+ "\n\n Parte do exército se manteve no recém conquistado Correrrio e a herdeira do trono de ferro optou por montar um acampamento no vale entre as montanhas, para poder observar qualquer inimigo que se aproximasse.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+
+		Console("\n\n Para comemorar a vitória e honrar os que se foram, Daenerys decide fazer uma festa ao estilo Dothraki, povo que apoiou o início de sua jornada como rainha.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+
+		Console("\n Apesar do luto pelas vidas perdidas, todos comemoram dançando, cantando e comendo em volta da fogueira. " 
+		+ "\n\n A herdeira do trono de ferro passa a temer o que está por vir. ",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+
+		Console("\n Afinal, em uma guerra, não sabemos até quando os bons momentos irão durar." 
+		+ "\n\n Durante a festa, Daenerys percebe a ausência de Ellaria e vai em busca da aliada.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+
+		Console("\n\n Ao ver a mulher sentada em frente ao lago, Daenerys questiona: \n - O que está havendo, Ellaria?" 
+		+ "\n\n Ellaria responde: \n - Recebi informações de que Cersei está reunindo tropas, deveríamos ter poupado recursos quando tivemos oportunidade.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+
+		Console("\n\n Daenerys reafirma a sua decisão: \n - Com o território que conseguimos e as tropas que se juntam a nós, estaremos com os recursos suficientes em brev…",
+		  TimeUnit.MICROSECONDS, 50);
+
+		Console("\n\n Daenerys é interrompida com gritos, sem entender se levanta, quando o cavaleiro Sor Jorah, seu protetor, aparece puxando-a e correndo.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+		
+		Console("\n\n  Seguidos por Ellaria, param atrás de uma das barracas e Jorah explica: \n - Estamos sendo atacados pelo leste, os arqueiros a postos estão dando conta por ora, temos que nos preparar para partir.",
+				TimeUnit.MICROSECONDS, temp_narrativa);
+		
+		Console("\n\n Daenerys então pergunta: \n - Qual o tamanho da força ofensiva? Somos poucos, podemos conter a situação?" 
+		+ "\n\n Então Ellaria aconselha: \n - Devemos partir enquanto podemos! \n Fomos pegos de surpresa, estamos despreparados, minhas tropas estão a postos no perímetro norte, podemos escapar pelas laterais.",
+				 TimeUnit.MICROSECONDS, temp_narrativa);
+		
+		Console("\n\n - [1] Partir ou [2] Retaliar!", TimeUnit.MILLISECONDS, temp_dialog);
+
+		escolhaIIdestinoII = entrada.nextInt();
+
+		if (escolhaIIdestinoII == 1) {
+			numTerritorios += 10;
+
+			Console("Boa escolha, partir te fez poupar recursos e adquirir 10 pontos! \n Placar: "
+					+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+			segundoDesafio();
+			parteIIIdestinoI();
+
+			break;
+
+		} else if (escolhaIIdestinoII == 2) {
+			numTerritorios += 30;
+
+			Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 30 pontos! \n Placar: "
+					+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+			segundoDesafio();
+			parteIIIdestinoII();
+
+			break;
+
+		} else {
+			System.out.println("Você não digitou uma resposta válida!");
+
+		}
+	} while (escolhaIIdestinoII != 1 || escolhaIIdestinoII != 2);
+
+}
+
+    
     // ------------------------------------- Partes III  -------------------------------------------------------------------
 
+    static void parteIIIdestinoI() throws Exception {
+
+        System.out.println("Cheguei na parte 3");
+
+    }
+
+    static void parteIIIdestinoII() throws Exception {
+        
+        System.out.println("Cheguei na parte 3");
+
+    }
 
     // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
