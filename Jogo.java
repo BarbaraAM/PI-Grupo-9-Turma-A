@@ -366,7 +366,80 @@ public class Jogo {
 
 
     static void terceiroDesafio() throws Exception {
+        Console("\n\n\n ATENÇÃO! Seu segundo desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
+        100);
 
+        List<String> alternativas = new ArrayList<>();
+        alternativas.add("4 e 8");
+        alternativas.add("3 e 6");
+        alternativas.add("4 e 12");
+        alternativas.add("2 e 4");
+        alternativas.add("4 e 6");
+
+        Collections.shuffle(alternativas); // embaralha as alternativas
+
+        String respostaCerta = "4 e 8";
+        do {
+            Console("As potências 2² e 2³ correspondem, respectivamente, às seguintes representações: \n",
+                    TimeUnit.MILLISECONDS, 100);
+
+            for (int i = 0; i < alternativas.size(); i++) {
+                System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+            }
+
+            Scanner entrada = new Scanner(System.in);
+            String selected = entrada.nextLine();
+
+            switch (selected) {
+                case "a": {
+                    if (alternativas.get(0).equals(respostaCerta)) {
+
+                        System.out.println("Resposta incorreta");
+                        numTerritorios -= 10;
+                        break;
+                    }
+                }
+                case "b": {
+                    if (alternativas.get(1).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        break;
+                    }
+                }
+                case "c": {
+                    if (alternativas.get(2).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        break;
+                    }
+                }
+                case "d": {
+                    if (alternativas.get(3).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        break;
+                    }
+                }
+                case "e": {
+                    if (alternativas.get(4).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        break;
+                    }
+                } 
+            }
+
+            // se a resposta selecionada estiver incorreta, as alternativas embaralham de
+            // novo
+
+            Collections.shuffle(alternativas);
+            System.out.println("Resposta incorreta");
+
+        } while (true);
     }
 
     static void quartoDesafio() throws Exception {
@@ -528,13 +601,100 @@ public class Jogo {
 
         System.out.println("Cheguei na parte 3");
 
+        /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
+        System.out.println("HISTORIA DA PARTE 3 DESTINO 1");
+        System.out.println("Você deseja [1]atacar ou [2]recuar");
+        /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
+
+        Scanner entrada = new Scanner(System.in);
+		int escolhaIIIdestinoI = entrada.nextInt();
+        entrada.close();
+
+        do {
+            if (escolhaIIIdestinoI == 1) {
+                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
+                    + numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+                numTerritorios += 20;
+    
+                terceiroDesafio();
+                parteIIIIdestinoI();
+                break;
+    
+            } else if (escolhaIIIdestinoI == 2) {
+                Console("Boa escolha, recuar te fez poupar recursos e adquirir 10 pontos! \n Placar: "
+                    + numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+                numTerritorios += 10;
+
+    
+                terceiroDesafio();
+                parteIIIIdestinoII();
+                break;
+
+            } else {
+                System.out.println("Você não digitou uma resposta válida!");
+            }
+        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
     }
+
 
     static void parteIIIdestinoII() throws Exception {
-        
+
         System.out.println("Cheguei na parte 3");
 
+        /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
+        System.out.println("HISTORIA DA PARTE 3 DESTINO 1");
+        System.out.println("Você deseja [1]atacar ou [2]recuar");
+        /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
+
+        Scanner entrada = new Scanner(System.in);
+		int escolhaIIIdestinoI = entrada.nextInt();
+
+        do {
+            if (escolhaIIIdestinoI == 1) {
+                numTerritorios += 20;
+    
+                Console("Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, 50);
+    
+                terceiroDesafio();
+                parteIIIIdestinoI();
+    
+                break;
+    
+            } else if (escolhaIIIdestinoI == 2) {
+                numTerritorios += 10;
+    
+                Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 10 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, 50);
+    
+                terceiroDesafio();
+                parteIIIIdestinoII();
+    
+                break;
+    
+            } else {
+                System.out.println("Você não digitou uma resposta válida!");
+    
+            }
+        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
+       
+
     }
+
+    static void parteIIIIdestinoI() throws Exception {
+
+        System.out.println("Cheguei na parte 4 DESTINO 1");
+
+    }
+
+    static void parteIIIIdestinoII() throws Exception {
+
+        System.out.println("Cheguei na parte 4 DESTINO 2");
+
+    }
+ 
 
     // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
