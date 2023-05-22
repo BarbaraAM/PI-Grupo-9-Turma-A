@@ -20,6 +20,7 @@ public class Jogo {
 
     // variavel contador
     static int numTerritorios = 0;
+    static int valorParteFinal = 0;
 
     static int temp_dialog = 20, temp_narrativa = 300, temp_ascII = 10;
 
@@ -61,7 +62,7 @@ public class Jogo {
 
         int escolhaMenu;
         do {
-            System.out.println("\n\n..:: Game of Thrones ::.. \n\n1 - Jogar \n2 - Instruções\n3 - Créditos \n4 - Sair");
+            System.out.println("\n\n..:: Game of Thrones ::.. \n\n1 - Jogar \n2 - Instruções\n3 - Créditos \n4 - Sair \n5 - Parte Final");
             System.out.println();
 
             escolhaMenu = entrada.nextInt();
@@ -71,13 +72,15 @@ public class Jogo {
                 instrucoes();
             } else if (escolhaMenu == 3) {
                 creditos();
+            } else if (escolhaMenu == 5) { //OPÇÃO TEMPORARIA PARA TESTE DA PARTE FINAL
+                parteFinal();
             } else if (escolhaMenu == 4) {
                 System.out.println("Você saiu do jogo!");
                 System.exit(0);
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
-        } while (escolhaMenu != 1 && escolhaMenu != 2 && escolhaMenu != 3 && escolhaMenu != 4);
+        } while (escolhaMenu != 1 && escolhaMenu != 2 && escolhaMenu != 3 && escolhaMenu != 4 && escolhaMenu != 5);
     }
 
     // ------------------------------------- PARTE I -------------------------------------------------------------------
@@ -742,11 +745,125 @@ public class Jogo {
             if (escolhaMenu == 2) {
                 menu();
             } else {
-                System.out.println("\nOpção inválida, digite novamente: ");
+                System.out.println("\nOpção inválida, digite novamente:\n ");
             }
         } while (escolhaMenu != 2);
     }
     // ------------------------------------- FUNÇÕES -------------------------------------------------------------------
+    
+ // ------------------------------------- PARTE FINAL -------------------------------------------------------------------
+    
+    public static void parteFinal() throws Exception {
+    	
+    	Scanner entrada = new Scanner(System.in);
+
+		List<String> alternativas = new ArrayList<>();
+
+		alternativas.add("Opção 1");
+
+		alternativas.add("Opção 2");
+
+		alternativas.add("Opção 3");
+
+		alternativas.add("Opção 4");
+
+		alternativas.add("Opção 5");
+
+		// embaralha as alternativas
+
+		Collections.shuffle(alternativas);
+
+		String respostaCerta = "Opção 3";
+
+		do {
+
+			Console("Qual a alternativa correta ?\n",
+					TimeUnit.MILLISECONDS, 100);
+
+			for (int i = 0; i < alternativas.size(); i++) {
+
+				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+			}
+
+			String selected = entrada.nextLine();
+
+			switch (selected) {
+
+			case "a" -> {
+
+				if (alternativas.get(0).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					valorParteFinal = 30;
+					return;
+
+				}
+
+			}
+
+			case "b" -> {
+
+				if (alternativas.get(1).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					valorParteFinal = 30;
+					return;
+
+				}
+
+			}
+
+			case "c" -> {
+
+				if (alternativas.get(2).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					valorParteFinal = 30;
+					return;
+
+				}
+
+			}
+
+			case "d" -> {
+
+				if (alternativas.get(3).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					valorParteFinal = 30;
+					return;
+
+				}
+
+			}
+
+			case "e" -> {
+
+				if (alternativas.get(4).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+					valorParteFinal = 30;
+					return;
+
+				}
+
+			}
+
+			}
+
+			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
+			// novo
+
+			Collections.shuffle(alternativas);
+
+			System.out.println("Resposta incorreta");
+
+		} while (true);
+
+	}
+    	
+    
 
     public static void Console(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
