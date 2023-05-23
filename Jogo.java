@@ -19,8 +19,7 @@ public class Jogo {
     static String nomeMaodaRainha;
 
     // variavel contador
-    static int numTerritorios = 0;
-    static int valorParteFinal = 0;
+    static int numTerritorios = 0; 
 
     static int temp_dialog = 20, temp_narrativa = 300, temp_ascII = 10;
 
@@ -54,6 +53,9 @@ public class Jogo {
                     TimeUnit.MICROSECONDS, temp_dialog);
 
            menu();
+
+           System.out.println(" >>>>>> Placar Final : " + numTerritorios);
+
     }
 
     // ------------------------------------------------------- MENU -------------------------------------------------------
@@ -72,8 +74,8 @@ public class Jogo {
                 instrucoes();
             } else if (escolhaMenu == 3) {
                 creditos();
-            } else if (escolhaMenu == 5) { //OPÇÃO TEMPORARIA PARA TESTE DA PARTE FINAL
-                parteFinal();
+            // } else if (escolhaMenu == 5) { //OPÇÃO TEMPORARIA PARA TESTE DA PARTE FINAL
+            //     parteFinal();
             } else if (escolhaMenu == 4) {
                 System.out.println("Você saiu do jogo!");
                 System.exit(0);
@@ -502,6 +504,7 @@ public class Jogo {
 
 				segundoDesafio();
 				parteIIIdestinoI();
+               
 
 				break;
 
@@ -513,6 +516,7 @@ public class Jogo {
 
 				segundoDesafio();
 				parteIIIdestinoII();
+                
 
 				break;
 
@@ -708,20 +712,263 @@ public class Jogo {
     static void parteIIIIdestinoI() throws Exception {
 
         System.out.println("Cheguei na parte 4 DESTINO 1");
+        parteFinal1();
+        
 
     }
 
     static void parteIIIIdestinoII() throws Exception {
 
         System.out.println("Cheguei na parte 4 DESTINO 2");
+        parteFinal2();
 
     }
  
 
     // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
+    
     // ------------------------------------- Partes V ( final)  -------------------------------------------------------------------
+    public static void parteFinal1() throws Exception {
 
+        Console("Parabens, você chegou na parte Final !!!\n",
+                TimeUnit.MILLISECONDS, 100);
+        Console("! \n Placar: " + numTerritorios, TimeUnit.MILLISECONDS, 20 );
+        Scanner entrada = new Scanner(System.in);
+    
+        List<String> alternativas = new ArrayList<>();
+    
+        alternativas.add("26");
+    
+        alternativas.add("39");
+    
+        alternativas.add("3");
+    
+        alternativas.add("13");
+    
+        alternativas.add("169");
+    
+        // embaralha as alternativas
+    
+        Collections.shuffle(alternativas);
+    
+        String respostaCerta = "13";
+    
+        do {
+    
+            Console("\nQual a Raiz Quadrada de 169 ?\n\n",
+                    TimeUnit.MILLISECONDS, 100);
+    
+            for (int i = 0; i < alternativas.size(); i++) {
+    
+                System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+    
+            }
+    
+            String selected = entrada.nextLine();
+    
+            switch (selected) {
+    
+                case "a" -> {
+    
+                    if (alternativas.get(0).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }
+    
+                }
+    
+                case "b" -> {
+    
+                    if (alternativas.get(1).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }
+    
+                }
+    
+                case "c" -> {
+    
+                    if (alternativas.get(2).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }
+    
+                }
+    
+                case "d" -> {
+    
+                    if (alternativas.get(3).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }
+    
+                }
+    
+                case "e" -> {
+    
+                    if (alternativas.get(4).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }
+    
+                }
+    
+            }
+    
+            // se a resposta selecionada estiver incorreta, as alternativas embaralham de
+            // novo
+    
+            Collections.shuffle(alternativas);
+    
+            System.out.println("Resposta incorreta");
+    
+        } while (true);
+    
+      
+    
+    }
+    
+    public static void parteFinal2() throws Exception {
+    
+        Console("Parabens, você chegou na parte Final !!!!!\n",
+                TimeUnit.MILLISECONDS, 100);
+        Console("! \n Placar: " + numTerritorios, TimeUnit.MILLISECONDS, 20 );
+    
+        Scanner entrada = new Scanner(System.in);
+    
+        List<String> alternativas = new ArrayList<>();
+    
+        alternativas.add("Isaac Newton");
+    
+        alternativas.add("Albert Einsten");
+    
+        alternativas.add("Pitágoras de Samos");
+    
+        alternativas.add("Van Gogh");
+    
+        alternativas.add("Leonardo da Vinci");
+    
+        // embaralha as alternativas
+    
+        Collections.shuffle(alternativas);
+    
+        String respostaCerta = "Pitágoras de Samos";
+    
+        do {
+    
+            Console("\nQuem é considerado o pai da matamática ?\n\n",
+                    TimeUnit.MILLISECONDS, 100);
+    
+            for (int i = 0; i < alternativas.size(); i++) {
+    
+                System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+    
+            }
+    
+            String selected = entrada.nextLine();
+    
+            switch (selected) {
+    
+                case "a" -> {
+    
+                    if (alternativas.get(0).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }else {
+                        numTerritorios -= 10;
+                    }
+    
+                }
+    
+                case "b" -> {
+    
+                    if (alternativas.get(1).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }else{
+                        numTerritorios -= 10;
+                    }
+    
+                }
+    
+                case "c" -> {
+    
+                    if (alternativas.get(2).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }else{
+                        numTerritorios -= 10;
+                    }
+    
+                }
+    
+                case "d" -> {
+    
+                    if (alternativas.get(3).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+                        numTerritorios += 30;
+                        return;
+    
+                    }else{
+                        numTerritorios -= 10;
+                    }
+    
+                }
+    
+                case "e" -> {
+    
+                    if (alternativas.get(4).equals(respostaCerta)) {
+    
+                        System.out.println("Resposta correta");
+
+                        numTerritorios += 30;
+                       
+                        return;
+    
+                    }else{
+                        numTerritorios -= 10;
+                    }
+    
+                }
+    
+            }
+    
+            // se a resposta selecionada estiver incorreta, as alternativas embaralham de
+            // novo
+    
+            Collections.shuffle(alternativas);
+    
+            System.out.println("Resposta incorreta");
+    
+        } while (true);
+    
+    }
 
 
     // ------------------------------------- INSTRUÇÕES -------------------------------------------------------------------
@@ -772,117 +1019,7 @@ public class Jogo {
     
  // ------------------------------------- PARTE FINAL -------------------------------------------------------------------
     
-    public static void parteFinal() throws Exception {
-    	
-    	Scanner entrada = new Scanner(System.in);
-
-		List<String> alternativas = new ArrayList<>();
-
-		alternativas.add("Opção 1");
-
-		alternativas.add("Opção 2");
-
-		alternativas.add("Opção 3");
-
-		alternativas.add("Opção 4");
-
-		alternativas.add("Opção 5");
-
-		// embaralha as alternativas
-
-		Collections.shuffle(alternativas);
-
-		String respostaCerta = "Opção 3";
-
-		do {
-
-			Console("Qual a alternativa correta ?\n",
-					TimeUnit.MILLISECONDS, 100);
-
-			for (int i = 0; i < alternativas.size(); i++) {
-
-				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
-
-			}
-
-			String selected = entrada.nextLine();
-
-			switch (selected) {
-
-			case "a" -> {
-
-				if (alternativas.get(0).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					valorParteFinal = 30;
-					return;
-
-				}
-
-			}
-
-			case "b" -> {
-
-				if (alternativas.get(1).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					valorParteFinal = 30;
-					return;
-
-				}
-
-			}
-
-			case "c" -> {
-
-				if (alternativas.get(2).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					valorParteFinal = 30;
-					return;
-
-				}
-
-			}
-
-			case "d" -> {
-
-				if (alternativas.get(3).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					valorParteFinal = 30;
-					return;
-
-				}
-
-			}
-
-			case "e" -> {
-
-				if (alternativas.get(4).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					valorParteFinal = 30;
-					return;
-
-				}
-
-			}
-
-			}
-
-			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
-			// novo
-
-			Collections.shuffle(alternativas);
-
-			System.out.println("Resposta incorreta");
-
-		} while (true);
-
-	}
-    	
-    
+ 
 
     public static void Console(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
