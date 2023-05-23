@@ -605,8 +605,17 @@ public class Jogo {
         System.out.println("Cheguei na parte 3");
 
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
-        System.out.println("HISTORIA DA PARTE 3 DESTINO 1");
-        System.out.println("Você deseja [1]atacar ou [2]recuar");
+        Console("Assim que Daenerys decidi fugir do ataque surpresa de Cersei, a mesma consegue proteger inúmeras vidas de suas tropas que morreriam em batalha. "
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Daenerys passa a ser cada vez mais respeitada por suas sábias decisões no campo de batalha!"
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Olenna diz que não deveriam deixar o ataque de surpresa de Cersei de nada e que deveríamos pensar em um plano para atacar Cersei."
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Mas seu cavaleiro Jorah diz que na situação atual o melhor seria economizar recursos, cuidar dos feridos e deixar nossas tropas mais forte!"
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+
+        Console("[1] Atacar Cersei ou [2]Poupar recursos! "
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
         Scanner entrada = new Scanner(System.in);
@@ -647,12 +656,22 @@ public class Jogo {
         System.out.println("Cheguei na parte 3");
 
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
-        System.out.println("HISTORIA DA PARTE 3 DESTINO 1");
-        System.out.println("Você deseja [1]atacar ou [2]recuar");
+        Console("Então Daenerys com seu exército decide Retaliar o ataque inimigo, porem seu exército não estava com todas as suas forças, pois acabaram de sair de uma batalha."
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Isso fez com o exército de Cersei que era menor que o exército de Daenerys tivessem o mesmo nível de força, então o menor erro poderia ditar o destino dessa batalha!"
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Daenerys percebe que seu cavaleiro Jorah esta lutando contra dois inimigos ao mesmo tempo, e decidi ir ajudá-lo, quando de repente escuta um grito e percebe que sua aliada Ellaria esta com um ferimento na perna e não consegue se mexer."
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("Por isso Daenerys tem que fazer uma escolha, ajudar Jorah que esta lutando contra dois inimigos sozinho, ou ajudar Ellaria que esta com a perna ferida!"
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+        Console("[1] Ajudar Jorah ou [2] Ajudar Ellaria."
+            + numTerritorios, TimeUnit.MILLISECONDS, 50);
+
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
         Scanner entrada = new Scanner(System.in);
 		int escolhaIIIdestinoI = entrada.nextInt();
+        entrada.close();
 
         do {
             if (escolhaIIIdestinoI == 1) {
