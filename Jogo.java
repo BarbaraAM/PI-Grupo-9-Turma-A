@@ -19,6 +19,8 @@ public class Jogo {
     static int numTerritorios = 0; 
 
     public static void main(String[] args) throws Exception {
+
+
         Console("Depois de dias pelo Mar Extreito, terra foi avistada...\n" +
                 "    .                  __.   .  _   *     -.\n" +
                 "           *         /_ . \\   ((         /  \\       *    .\n" +
@@ -260,7 +262,7 @@ public class Jogo {
                 Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: " + numTerritorios);
            
                 terceiroDesafio();
-                parteIVdestinoI();
+                parteIV();
                 break;
     
             } else if (escolha == 2) {
@@ -269,7 +271,7 @@ public class Jogo {
                 Console("Boa escolha, recuar te fez poupar recursos e adquirir 10 pontos! \n Placar: " + numTerritorios);
                     
                 terceiroDesafio();
-                parteIVdestinoI();
+                parteIV();
                 break;
 
             } else {
@@ -301,7 +303,7 @@ public class Jogo {
                 Console("Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: " + numTerritorios);
     
                 quartoDesafio();
-                parteIVdestinoI();
+                parteIV();
                 break;
     
             } else if (escolha == 2) {
@@ -310,7 +312,7 @@ public class Jogo {
                 Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 10 pontos! \n Placar: " + numTerritorios);
     
                 quartoDesafio();
-                parteIVdestinoI();
+                parteIV();
                 break;
     
             } else {
@@ -320,7 +322,7 @@ public class Jogo {
     }
     // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
-    static void parteIVdestinoI() throws Exception {
+    static void parteIV() throws Exception {
 
         Console("\n\n Com seu exército exausto e faminto, Daenerys iniciou uma busca desesperada por alimentos e por um refúgio adequado para que todos pudessem se recuperar. ");
 
@@ -374,6 +376,17 @@ public class Jogo {
 
         } while (escolha != 1 || escolha != 2);
 
+        quartoDesafio();
+
+        parteV();
+
+    }
+
+
+    // ------------------------------------- Partes V ( final)  -------------------------------------------------------------------
+
+    static void parteV() throws Exception {
+        
         Console("A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ");
 
         Console("\n\n Olenna, uma mulher de grande sagacidade, acrescentou:"
@@ -381,6 +394,7 @@ public class Jogo {
 
         Console("\n\n Daenerys respondeu com um sorriso determinado:"
                 + "\n Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.");
+
         Console("\n\n Ellaria expressou suas preocupações:"
                 + "\n Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.");
 
@@ -390,31 +404,37 @@ public class Jogo {
         Console("\n\n Com o passar dos dias, o exército continua se fortalecendo e se preparando para a batalha final."
                 + " \n Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ");
 
-        quartoDesafio();
+
+                if (numTerritorios <= 60) {
+                    desafioFinalI();
+                    finalIIparteV();
+                } if (numTerritorios > 60 ) {
+                    desafioFinalII();
+                    finalIparteV();
+                }
+
     }
 
-    // ------------------------------------- Partes V ( final)  -------------------------------------------------------------------
+    static void finalIparteV() throws Exception {
+        Console("\n\n Após formar uma aliança com os Greyjoy e conquistar os mares, Daenerys lança um ataque conjunto com suas tropas terrestres e a poderosa frota Greyjoy contra a capital.\n Com o elemento surpresa e a superioridade numérica, eles conseguem romper as defesas inimigas e adentram a cidade. Daenerys lidera suas tropas com destreza, demonstrando coragem e estratégia.");
 
-    static void finalI() throws Exception {
-        Console("\n Após formar uma aliança com os Greyjoy e conquistar os mares, Daenerys lança um ataque conjunto com suas tropas terrestres e a poderosa frota Greyjoy contra a capital. Com o elemento surpresa e a superioridade numérica, eles conseguem romper as defesas inimigas e adentram a cidade. Daenerys lidera suas tropas com destreza, demonstrando coragem e estratégia.");
+        Console("\n\n No confronto final, Daenerys enfrenta o atual ocupante do Trono de Ferro, derrotando-o com astúcia e força. A notícia de sua vitória se espalha rapidamente, e o povo dos Sete Reinos começa a aclamá-la como sua nova rainha. Ela é coroada, finalmente tomando posse do Trono de Ferro.");
 
-        Console("\n No confronto final, Daenerys enfrenta o atual ocupante do Trono de Ferro, derrotando-o com astúcia e força. A notícia de sua vitória se espalha rapidamente, e o povo dos Sete Reinos começa a aclamá-la como sua nova rainha. Ela é coroada, finalmente tomando posse do Trono de Ferro.");
+        Console("\n\n Com o controle da capital e o apoio das principais casas, Daenerys inicia um período de reconstrução e estabilidade nos Sete Reinos. Ela implementa reformas sociais e políticas, garantindo justiça e igualdade para todos. \n A paz começa a ser restabelecida, e a influência dos dragões e do novo reinado de Daenerys é sentida em todo o reino.");
 
-        Console("\n Com o controle da capital e o apoio das principais casas, Daenerys inicia um período de reconstrução e estabilidade nos Sete Reinos. Ela implementa reformas sociais e políticas, garantindo justiça e igualdade para todos. A paz começa a ser restabelecida, e a influência dos dragões e do novo reinado de Daenerys é sentida em todo o reino.");
-
-        Console("\n Daenerys governa com sabedoria e benevolência, procurando apaziguar as tensões e reconciliar os diferentes povos dos Sete Reinos. Ela se torna uma rainha amada e respeitada, e seu reinado é lembrado como uma era de progresso, justiça e harmonia.");
+        Console("\n\n Daenerys governa com sabedoria e benevolência, procurando apaziguar as tensões e reconciliar os diferentes povos dos Sete Reinos. Ela se torna uma rainha amada e respeitada, e seu reinado é lembrado como uma era de progresso, justiça e harmonia.");
     }
 
-    static void finalII()throws Exception {
-        Console("\n Daenerys, determinada a conquistar o Trono de Ferro, lança um ataque brutal contra a capital. Os dragões são convocados e usados com fúria destrutiva, causando grande devastação na cidade e no exército inimigo. No entanto, a batalha se arrasta por semanas, causando um enorme custo humano e material para ambos os lados.");
+    static void finalIIparteV()throws Exception {
+        Console("\n\n Daenerys, determinada a conquistar o Trono de Ferro, lança um ataque brutal contra a capital. Os dragões são convocados e usados com fúria destrutiva, causando grande devastação na cidade e no exército inimigo.\n No entanto, a batalha se arrasta por semanas, causando um enorme custo humano e material para ambos os lados.");
 
-        Console("\n Apesar de sua vitória, a cidade está em ruínas e muitas vidas foram perdidas. Daenerys se senta no Trono de Ferro, mas a alegria de sua conquista é manchada pela destruição e pelo peso das perdas sofridas. A população dos Sete Reinos olha para ela com medo e desconfiança, temendo que sua liderança seja marcada por mais violência e tirania.");
+        Console("\n\n Apesar de sua vitória, a cidade está em ruínas e muitas vidas foram perdidas. Daenerys se senta no Trono de Ferro, mas a alegria de sua conquista é manchada pela destruição e pelo peso das perdas sofridas. \nA população dos Sete Reinos olha para ela com medo e desconfiança, temendo que sua liderança seja marcada por mais violência e tirania.");
 
-        Console("\n Enquanto tenta governar, Daenerys enfrenta uma série de rebeliões e resistência por parte das casas nobres e do povo comum, que estão descontentes com seu reinado sangrento. Ela luta para manter o controle e a estabilidade, mas a desconfiança generalizada e o ressentimento persistem.");
+        Console("\n\n Enquanto tenta governar, Daenerys enfrenta uma série de rebeliões e resistência por parte das casas nobres e do povo comum, que estão descontentes com seu reinado sangrento. Ela luta para manter o controle e a estabilidade, mas a desconfiança generalizada e o ressentimento persistem.");
 
-        Console("\n A reputação de Daenerys como a 'Rainha Quebradora de Correntes' é interpretada de forma negativa, com muitos vendo-a como uma tirana e uma conquistadora implacável. A paz e a prosperidade são meras ilusões, e o reinado de Daenerys é marcado por conflitos internos e rebeliões constantes.");
+        Console("\n\n A reputação de Daenerys como a 'Rainha Quebradora de Correntes' é interpretada de forma negativa, com muitos vendo-a como uma tirana e uma conquistadora implacável. \n A paz e a prosperidade são meras ilusões, e o reinado de Daenerys é marcado por conflitos internos e rebeliões constantes.");
 
-        Console("\n Ao final, Daenerys percebe que seu desejo pelo poder custou caro demais. O Trono de Ferro é seu, mas ela governa sobre um reino dilacerado.");
+        Console("\n\n Ao final, Daenerys percebe que seu desejo pelo poder custou caro demais. O Trono de Ferro é seu, mas ela governa sobre um reino dilacerado.");
     }
 
     // ----------------------------------------DESAFIOS MATEMÁTICA----------------------------------------
@@ -570,9 +590,9 @@ public class Jogo {
     
     public static void desafioFinalI() throws Exception {
 
-        Console("Parabens, você chegou na parte Final !!!\n");
+        Console("Agora, o último desafio!\n Será que você será capaz?\n \n");
 
-        Console("! \n Placar: " + numTerritorios);
+        Console("\n Seu placar: " + numTerritorios);
         
         List<String> alternativas = new ArrayList<>();
         alternativas.add("26");
@@ -660,8 +680,9 @@ public class Jogo {
     
     public static void desafioFinalII() throws Exception {
     
-        Console("Parabens, você chegou na parte Final !!!!!\n");
-        Console("! \n Placar: " + numTerritorios);
+        Console("Agora, o último desafio!\n Será que você será capaz? \n \n");
+
+        Console("\n Seu placar: " + numTerritorios);
     
     
         List<String> alternativas = new ArrayList<>();
