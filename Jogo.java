@@ -580,10 +580,208 @@ public class Jogo {
 
 
     static void terceiroDesafio() throws Exception {
-       
+
+        Console("\n\n\n ATENÇÃO! Seu terceiro desafio matemático começará em: \n 3 \n 2 \n 1 \n");
+
+        Scanner entrada = new Scanner(System.in);
+
+        List<String> alternativas = new ArrayList<>();
+
+        alternativas.add("x = 9");
+
+        alternativas.add("x = 6");
+
+        alternativas.add("x = 12");
+
+        alternativas.add("x = 4");
+
+        alternativas.add("x = 8");
+
+        // embaralha as alternativas
+
+        Collections.shuffle(alternativas);
+
+        String respostaCerta = "x = 9";
+
+        do {
+
+            Console("Resolva a seguinte equação do primeiro grau com uma incógnita: 4x + 2 = 38  \n");
+
+            for (int i = 0; i < alternativas.size(); i++) {
+
+                System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+            }
+
+            String selected = entrada.nextLine();
+
+            switch (selected) {
+
+                case "a" -> {
+
+                    if (alternativas.get(0).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "b" -> {
+
+                    if (alternativas.get(1).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "c" -> {
+
+                    if (alternativas.get(2).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "d" -> {
+
+                    if (alternativas.get(3).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "e" -> {
+
+                    if (alternativas.get(4).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+            }
+
+            Collections.shuffle(alternativas);
+
+            System.out.println("Resposta incorreta");
+
+        } while (true);
+
     }
 
     static void quartoDesafio() throws Exception {
+
+        Console("\n\n\n ATENÇÃO! Seu quarto desafio matemático começará em: \n 3 \n 2 \n 1 \n");
+
+        Scanner entrada = new Scanner(System.in);
+
+        List<String> alternativas = new ArrayList<>();
+
+        alternativas.add("(x-1) + x + (x + 1) = 150");
+
+        alternativas.add("x + x + x = 50");
+
+        alternativas.add("(x-1) * 2 = 150");
+
+        alternativas.add("3x = 50");
+
+        alternativas.add("x = 50");
+
+        // embaralha as alternativas
+
+        Collections.shuffle(alternativas);
+
+        String respostaCerta = "(x-1) + x + (x + 1) = 150";
+
+        do {
+
+            Console("A soma de três números inteiros consecutivos é igual a 150, qual equação que expressa esse problema? \n");
+
+            for (int i = 0; i < alternativas.size(); i++) {
+
+                System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+            }
+
+            String selected = entrada.nextLine();
+
+            switch (selected) {
+
+                case "a" -> {
+
+                    if (alternativas.get(0).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "b" -> {
+
+                    if (alternativas.get(1).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "c" -> {
+
+                    if (alternativas.get(2).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "d" -> {
+
+                    if (alternativas.get(3).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+                case "e" -> {
+
+                    if (alternativas.get(4).equals(respostaCerta)) {
+
+                        System.out.println("Resposta correta");
+                        return;
+
+                    }
+
+                }
+
+           }
+
+            Collections.shuffle(alternativas);
+
+            System.out.println("Resposta incorreta");
+
+        } while (true);
 
     }
 
