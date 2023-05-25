@@ -24,12 +24,6 @@ public class Jogo {
     static int temp_dialog = 20, temp_narrativa = 300, temp_ascII = 10;
 
     public static void main(String[] args) throws Exception {
-//         Scanner entrada = new Scanner(System.in);
-//   //1      nomeMaodaRainha = entrada.next();
-//         int escolhaMenu;
-        ;
-
-
             Console("Depois de dias pelo Mar Extreito, terra foi avistada...\n" +
                     "    .                  __.   .  _   *     -.\n" +
                     "           *         /_ . \\   ((         /  \\       *    .\n" +
@@ -55,27 +49,25 @@ public class Jogo {
            menu();
 
            System.out.println(" >>>>>> Placar Final : " + numTerritorios);
-
     }
 
     // ------------------------------------------------------- MENU -------------------------------------------------------
     static void menu() throws Exception {
-        Scanner entrada = new Scanner(System.in);
-
         int escolhaMenu;
-        do {
-            System.out.println("\n\n..:: Game of Thrones ::.. \n\n1 - Jogar \n2 - Instruções\n3 - Créditos \n4 - Sair \n5 - Parte Final");
-            System.out.println();
 
+        System.out.println("\n\n..:: Game of Thrones ::.. \n\n1 - Jogar \n2 - Instruções\n3 - Créditos \n4 - Sair \n5 - Parte Final");
+
+        do {
+            Scanner entrada = new Scanner(System.in);
             escolhaMenu = entrada.nextInt();
+            entrada.close();
+
             if (escolhaMenu == 1) {
                 parteI();
             } else if (escolhaMenu == 2) {
                 instrucoes();
             } else if (escolhaMenu == 3) {
                 creditos();
-            // } else if (escolhaMenu == 5) { //OPÇÃO TEMPORARIA PARA TESTE DA PARTE FINAL
-            //     parteFinal();
             } else if (escolhaMenu == 4) {
                 System.out.println("Você saiu do jogo!");
                 System.exit(0);
@@ -88,33 +80,34 @@ public class Jogo {
     // ------------------------------------- PARTE I -------------------------------------------------------------------
 
     static void parteI() throws Exception {
-        Scanner entrada = new Scanner(System.in);
+
+        Console("\n 1Em meio a uma batalha pelo Trono de Ferro, Daenerys Targaryen recebe visitas que podem mudar completamente o rumo dos acontecimentos. Olenna Tyrell, em busca de vingança contra Cersei Lannister, e Ellaria Sand com as Serpentes da Areia, ambas com o mesmo objetivo, se unem a Daenerys em uma reunião de conselho. "
+                + "\n\n Daenerys, olhando para as duas mulheres, pergunta com curiosidade: \n - O que traz vocês duas até aqui? E como podemos ser úteis umas às outras?",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Olenna responde com sagacidade: \n - Eu quero vingança contra Cersei Lannister, mas estou ciente de que sozinha não tenho força para derrubá-la. Você, Daenerys, é uma líder poderosa com um exército forte. Sei que podemos ajudar um ao outro.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Ellaria acrescenta: \n - Eu também quero vingança contra Cersei Lannister, ela assassinou meu amado Oberyn. Juntos, podemos acabar com o reinado dela e colocar um fim em sua crueldade.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys olha para as duas mulheres e decide que pode contar com elas para vencer a guerra: \n - Vocês têm meu apoio. Juntos, podemos derrotar Cersei Lannister e colocar fim à sua tirania.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Em seguida, a reunião de conselho começa, e Daenerys ouve com atenção as sugestões de seus aliados sobre o que fazer em relação ao exército Lannister que está na região de Correrrio.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Olenna argumenta: \n - Atacar os Lannisters agora é a melhor opção. Não podemos deixá-los ganhar mais apoio e poder. Se não agirmos agora, podemos estar perdidos."
+                + "Ellaria, no entanto, oferece um ponto de vista diferente: \n - Poupar recursos agora é a melhor opção. CorreRio não é uma prioridade agora, e precisamos nos concentrar no que é realmente importante: acabar com o reinado de Cersei Lannister.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n - [1] Poupar Recursos ou [2] Atacar Território!", TimeUnit.MILLISECONDS, temp_dialog);
+
         int escolha;
-
         do {
-            Console("\n 1Em meio a uma batalha pelo Trono de Ferro, Daenerys Targaryen recebe visitas que podem mudar completamente o rumo dos acontecimentos. Olenna Tyrell, em busca de vingança contra Cersei Lannister, e Ellaria Sand com as Serpentes da Areia, ambas com o mesmo objetivo, se unem a Daenerys em uma reunião de conselho. "
-                    + "\n\n Daenerys, olhando para as duas mulheres, pergunta com curiosidade: \n - O que traz vocês duas até aqui? E como podemos ser úteis umas às outras?",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n Olenna responde com sagacidade: \n - Eu quero vingança contra Cersei Lannister, mas estou ciente de que sozinha não tenho força para derrubá-la. Você, Daenerys, é uma líder poderosa com um exército forte. Sei que podemos ajudar um ao outro.",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n Ellaria acrescenta: \n - Eu também quero vingança contra Cersei Lannister, ela assassinou meu amado Oberyn. Juntos, podemos acabar com o reinado dela e colocar um fim em sua crueldade.",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n Daenerys olha para as duas mulheres e decide que pode contar com elas para vencer a guerra: \n - Vocês têm meu apoio. Juntos, podemos derrotar Cersei Lannister e colocar fim à sua tirania.",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n Em seguida, a reunião de conselho começa, e Daenerys ouve com atenção as sugestões de seus aliados sobre o que fazer em relação ao exército Lannister que está na região de Correrrio.",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n Olenna argumenta: \n - Atacar os Lannisters agora é a melhor opção. Não podemos deixá-los ganhar mais apoio e poder. Se não agirmos agora, podemos estar perdidos."
-                    + "Ellaria, no entanto, oferece um ponto de vista diferente: \n - Poupar recursos agora é a melhor opção. CorreRio não é uma prioridade agora, e precisamos nos concentrar no que é realmente importante: acabar com o reinado de Cersei Lannister.",
-                    TimeUnit.MICROSECONDS, temp_narrativa);
-
-            Console("\n\n - [1] Poupar Recursos ou [2] Atacar Território!", TimeUnit.MILLISECONDS, temp_dialog);
-
+            Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
+            entrada.close();
 
             if (escolha == 1) {
                 numTerritorios += 20;
@@ -124,9 +117,7 @@ public class Jogo {
 
                 primeiroDesafio();
                 parteIIdestinoI();
-
                 break;
-
             } else if (escolha == 2) {
                 numTerritorios += 10;
 
@@ -137,10 +128,8 @@ public class Jogo {
                 parteIIdestinoII();
 
                 break;
-
             } else {
                 System.out.println("Você não digitou uma resposta válida!");
-
             }
         } while (escolha != 1 || escolha != 2);
 
@@ -148,44 +137,44 @@ public class Jogo {
 
     // ------------------------------------- Partes II  -------------------------------------------------------------------
     static void parteIIdestinoI() throws Exception {
+        Console("\n Passaram-se os dias e cada vez mais tropas chegam ao acampamento. "
+                + "\n\n Contente com o exército aumentando, Daenerys decide fazer uma festa ao estilo Dothraki, povo que apoiou o início de sua jornada como rainha.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
 
-		Scanner entrada = new Scanner(System.in);
+        Console("\n\n Com todos alegres, dançando, cantando e comendo em volta da fogueira, a herdeira do trono de ferro passa a temer o que está por vir."
+                + "\n Afinal, em uma guerra, não sabemos até quando os bons momentos irão durar.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Durante a festa, Daenerys percebe a ausência de Olenna e vai em busca da aliada.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Ao ver a mulher sentada em frente ao lago, Daenerys questiona:\n - O que está havendo, Olenna?",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Olenna responde: \n - Recebi informações de que Cersei está reunindo tropas, deveríamos ter atacado quando tivemos oportunidade.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys reafirma a sua decisão: \n - Com os recursos que conseguimos e as tropas que se aproximam, poderemos atacá-los em brev…",
+                TimeUnit.MICROSECONDS, 50);
+
+        Console("\n\n Daenerys é interrompida com gritos e fumaça, sem entender se levanta, quando o cavaleiro Sor Jorah, seu protetor, aparece puxando-a e correndo."
+                + "\n\n Seguidos por Olenna, param atrás de uma das barracas e Jorah explica: \n Estamos sendo atacados pelo leste, enviei uma tropa para o combate, temos que nos preparar para partir.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys então pergunta: \n - Qual o tamanho da força ofensiva? Estamos em grande número, precisamos pensar melhor.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n Então Olenna aconselha: \n - Devemos retaliar enquanto podemos! Fomos pegos de surpresa, mas não despreparados, minhas tropas estão a postos no perímetro norte, podemos atacar pelas laterais.",
+                TimeUnit.MICROSECONDS, temp_narrativa);
+
+        Console("\n\n - [1] Partir ou [2] Retaliar!", TimeUnit.MILLISECONDS, temp_dialog);
+
 		int escolha;
 
 		do {
-			Console("\n Passaram-se os dias e cada vez mais tropas chegam ao acampamento. "
-					+ "\n\n Contente com o exército aumentando, Daenerys decide fazer uma festa ao estilo Dothraki, povo que apoiou o início de sua jornada como rainha.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Com todos alegres, dançando, cantando e comendo em volta da fogueira, a herdeira do trono de ferro passa a temer o que está por vir."
-					+ "\n Afinal, em uma guerra, não sabemos até quando os bons momentos irão durar.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Durante a festa, Daenerys percebe a ausência de Olenna e vai em busca da aliada.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Ao ver a mulher sentada em frente ao lago, Daenerys questiona:\n - O que está havendo, Olenna?",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Olenna responde: \n - Recebi informações de que Cersei está reunindo tropas, deveríamos ter atacado quando tivemos oportunidade.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Daenerys reafirma a sua decisão: \n - Com os recursos que conseguimos e as tropas que se aproximam, poderemos atacá-los em brev…",
-				 TimeUnit.MICROSECONDS, 50);
-
-			Console("\n\n Daenerys é interrompida com gritos e fumaça, sem entender se levanta, quando o cavaleiro Sor Jorah, seu protetor, aparece puxando-a e correndo."
-					+ "\n\n Seguidos por Olenna, param atrás de uma das barracas e Jorah explica: \n Estamos sendo atacados pelo leste, enviei uma tropa para o combate, temos que nos preparar para partir.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Daenerys então pergunta: \n - Qual o tamanho da força ofensiva? Estamos em grande número, precisamos pensar melhor.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n Então Olenna aconselha: \n - Devemos retaliar enquanto podemos! Fomos pegos de surpresa, mas não despreparados, minhas tropas estão a postos no perímetro norte, podemos atacar pelas laterais.",
-					TimeUnit.MICROSECONDS, temp_narrativa);
-
-			Console("\n\n - [1] Partir ou [2] Retaliar!", TimeUnit.MILLISECONDS, temp_dialog);
-
+            Scanner entrada = new Scanner(System.in);
 			escolha = entrada.nextInt();
+            entrada.close();
 
 			if (escolha == 1) {
 				numTerritorios += 10;
@@ -196,9 +185,7 @@ public class Jogo {
 				segundoDesafio();
 				parteIIIdestinoI();
                
-
 				break;
-
 			} else if (escolha == 2) {
 				numTerritorios += 30;
 
@@ -207,25 +194,19 @@ public class Jogo {
 
 				segundoDesafio();
 				parteIIIdestinoII();
-                
 
 				break;
-
 			} else {
 				System.out.println("Você não digitou uma resposta válida!");
-
 			}
 		} while (escolha != 1 || escolha != 2);
-
 	}
 
 
     static void parteIIdestinoII() throws Exception {
 
-        Scanner entrada = new Scanner(System.in);
 		int escolha;
 
-		do {
 		Console("\n Após uma batalha muito árdua e grandes perdas, Daenerys se via no momento de se recompor."
 				+ "\n\n Parte do exército se manteve no recém conquistado Correrrio e a herdeira do trono de ferro optou por montar um acampamento no vale entre as montanhas, para poder observar qualquer inimigo que se aproximasse.",
 				TimeUnit.MICROSECONDS, temp_narrativa);
@@ -260,43 +241,41 @@ public class Jogo {
 		
 		Console("\n\n - [1] Partir ou [2] Retaliar!", TimeUnit.MILLISECONDS, temp_dialog);
 
-		escolha = entrada.nextInt();
+		do {
+            Scanner entrada = new Scanner(System.in);
+            escolha = entrada.nextInt();
+            entrada.close();
 
-		if (escolha == 1) {
-			numTerritorios += 10;
+            if (escolha == 1) {
+                numTerritorios += 10;
 
-			Console("Boa escolha, partir te fez poupar recursos e adquirir 10 pontos! \n Placar: "
-					+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+                Console("Boa escolha, partir te fez poupar recursos e adquirir 10 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, 50);
 
-			segundoDesafio();
-			parteIIIdestinoI();
+                segundoDesafio();
+                parteIIIdestinoI();
+                break;
 
-			break;
+            } else if (escolha == 2) {
+                numTerritorios += 30;
 
-		} else if (escolha == 2) {
-			numTerritorios += 30;
+                Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 30 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, 50);
 
-			Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 30 pontos! \n Placar: "
-					+ numTerritorios, TimeUnit.MILLISECONDS, 50);
+                segundoDesafio();
+                parteIIIdestinoII();
+                break;
 
-			segundoDesafio();
-			parteIIIdestinoII();
-
-			break;
-
-		} else {
-			System.out.println("Você não digitou uma resposta válida!");
-
-		}
-	} while (escolha != 1 || escolha != 2);
-
-}
+            } else {
+                System.out.println("Você não digitou uma resposta válida!");
+            }
+	    } while (escolha != 1 || escolha != 2);
+    }
 
     
     // ------------------------------------- Partes III  -------------------------------------------------------------------
 
     static void parteIIIdestinoI() throws Exception {
-
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
         Console("Assim que Daenerys decidi fugir do ataque surpresa de Cersei, a mesma consegue proteger inúmeras vidas de suas tropas que morreriam em batalha. "
             , TimeUnit.MILLISECONDS, 50);
@@ -311,46 +290,41 @@ public class Jogo {
             , TimeUnit.MILLISECONDS, 50);
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
-        Scanner entrada = new Scanner(System.in);
-		int escolhaIIIdestinoI = entrada.nextInt();
-       
-
+        int escolha;
+        
         do {
-            if (escolhaIIIdestinoI == 1) {
+            Scanner entrada = new Scanner(System.in);
+            escolha = entrada.nextInt();
+            entrada.close();
+
+            if (escolha == 1) {
                 numTerritorios += 20;
     
                 Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
                     + numTerritorios, TimeUnit.MILLISECONDS, 50);
-
            
                 terceiroDesafio();
                 parteIVdestinoI();
                 break;
     
-            } else if (escolhaIIIdestinoI == 2) {
+            } else if (escolha == 2) {
                 numTerritorios += 10;
 
                 Console("Boa escolha, recuar te fez poupar recursos e adquirir 10 pontos! \n Placar: "
                     + numTerritorios, TimeUnit.MILLISECONDS, 50);
-
-        
-
-    
+                    
                 terceiroDesafio();
-                parteIVdestinoII();
+                parteIVdestinoI();
                 break;
 
             } else {
                 System.out.println("Você não digitou uma resposta válida!");
             }
-        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
+        } while (escolha != 1 || escolha != 2);
     }
 
 
     static void parteIIIdestinoII() throws Exception {
-
-        System.out.println("Cheguei na parte 3");
-    
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
         Console("Então Daenerys com seu exército decide Retaliar o ataque inimigo, porem seu exército não estava com todas as suas forças, pois acabaram de sair de uma batalha."
             , TimeUnit.MILLISECONDS, 50);
@@ -365,12 +339,13 @@ public class Jogo {
 
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
-        Scanner entrada = new Scanner(System.in);
-		int escolhaIIIdestinoI = entrada.nextInt();
-        //entrada.close();
-
+        int escolha;
         do {
-            if (escolhaIIIdestinoI == 1) {
+            Scanner entrada = new Scanner(System.in);
+            escolha = entrada.nextInt();
+            entrada.close();
+
+            if (escolha == 1) {
                 numTerritorios += 20;
     
                 Console("Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: "
@@ -378,28 +353,22 @@ public class Jogo {
     
                 quartoDesafio();
                 parteIVdestinoI();
-    
                 break;
     
-            } else if (escolhaIIIdestinoI == 2) {
+            } else if (escolha == 2) {
                 numTerritorios += 10;
     
                 Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 10 pontos! \n Placar: "
                         + numTerritorios, TimeUnit.MILLISECONDS, 50);
     
-            //1
                 quartoDesafio();
-                parteIVdestinoII();
-    
+                parteIVdestinoI();
                 break;
     
             } else {
                 System.out.println("Você não digitou uma resposta válida!");
-    
             }
-        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
-       
-
+        } while (escolha != 1 || escolha != 2);
     }
     // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
@@ -433,15 +402,17 @@ public class Jogo {
                 TimeUnit.MILLISECONDS,temp_narrativa);
 
         Console("\n\n Escolha:"
-
                 + " \n 1. Trazer os dragões. "
                 + " \n 2. Atacar sem dragões. ", TimeUnit.MILLISECONDS, temp_narrativa);
 
-        Scanner entrada = new Scanner(System.in);
-        int escolhaIIIdestinoI = entrada.nextInt();
+        int escolha;
 
         do {
-            if (escolhaIIIdestinoI == 1) {
+            Scanner entrada = new Scanner(System.in);
+            escolha = entrada.nextInt();
+            entrada.close();
+
+            if (escolha == 1) {
                 numTerritorios += 20;
 
                 Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
@@ -451,8 +422,7 @@ public class Jogo {
                         TimeUnit.MILLISECONDS, temp_narrativa);
 
                 break;
-
-            } else if (escolhaIIIdestinoI == 2) {
+            } else if (escolha == 2) {
                 numTerritorios += 0;
 
                 Console("Daenerys reconsidera:"
@@ -460,13 +430,11 @@ public class Jogo {
                         TimeUnit.MILLISECONDS, temp_narrativa);
 
                 break;
-
             } else {
                 System.out.println("Você não digitou uma resposta válida!");
             }
 
-        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
-
+        } while (escolha != 1 || escolha != 2);
 
         Console("A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ",
                 TimeUnit.MILLISECONDS, temp_narrativa);
@@ -492,108 +460,11 @@ public class Jogo {
                 TimeUnit.MILLISECONDS, temp_narrativa);
 
         quartoDesafio();
-
-    }
-
-    static void parteIVdestinoII() throws Exception {
-
-         Console("\n\n Com seu exército exausto e faminto, Daenerys iniciou uma busca desesperada por alimentos e por um refúgio adequado para que todos pudessem se recuperar. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Após dias de marcha exaustiva, Sir Jorah avistou uma subida protegida por um rio, um local perfeito para proteger o grupo e proporcionar segurança natural.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Determinada a garantir a defesa, Daenerys organizou os arqueiros em pontos estratégicos para vigiar o confronto e estabeleceu um cronograma de patrulhas para monitorar a região. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Enquanto alguns soldados saíam para caçar e pescar, outros guardavam incansavelmente para montar o acampamento. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Com tudo ocorrendo conforme o planejado, Daenerys convocou uma reunião com Ellaria, Olenna e Sir Jorah para discutir o golpe final para conquistar o Trono de Ferro.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Daenerys declarou: "
-                + "\n - Chegou a hora de trazermos os dragões. Não podemos atacar a Capital sem eles. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Ellaria expressou suas preocupações: "
-                + "\n - Eu acredito que os dragões podem nos causar problemas. São animais perigosos, nossas tropas podem se assustar!",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Sir Jorah ponderou com sabedoria:"
-                + " \n - Os dragões simbolizam a força do novo reinado, mas devemos tratá-los com cautela. Precisamos de mais suprimentos para trazê-los.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Escolha:"
-
-                + " \n 1. Trazer os dragões. "
-                + " \n 2. Atacar sem dragões. ", TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Scanner entrada = new Scanner(System.in);
-
-
-        int escolhaIIIdestinoI = entrada.nextInt();
-
-        do {
-            if (escolhaIIIdestinoI == 1) {
-                numTerritorios += 20;
-
-                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
-                        + numTerritorios, TimeUnit.MILLISECONDS, temp_narrativa);
-
-                Console("Ellaria e Sir Jorah refletem sobre as palavras da rainha e percebem a inteligência inabalável em seus olhos. ",
-                        TimeUnit.MILLISECONDS, temp_narrativa);
-
-                break;
-
-            } else if (escolhaIIIdestinoI == 2) {
-                numTerritorios += 0;
-
-                Console("Daenerys reconsidera:"
-                        + "\n Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.",
-                        TimeUnit.MILLISECONDS, temp_narrativa);
-
-                break;
-
-            } else {
-                System.out.println("Você não digitou uma resposta válida!");
-            }
-
-        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
-        
-
-        Console("\n\n A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Olenna, uma mulher de grande sagacidade, acrescentou:"
-                + "\n A capital tem um trecho cercado pelo mar. Não temos tropas nem habilidades em batalhas marítimas.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Daenerys respondeu com um sorriso determinado:"
-                + "\n Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Ellaria expressou suas preocupações:"
-                + "\n Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Sir Jorah, conhecendo a importância de garantir aliados, acrescentou:"
-                + " \n Não queremos os Greyjoys como inimigos. Precisamos chegar a um acordo com eles, pois o contrário pode ser fatal para a nossa causa.",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        Console("\n\n Com o passar dos dias, o exército continua se fortalecendo e se preparando para a batalha final."
-                + " \n Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ",
-                TimeUnit.MILLISECONDS, temp_narrativa);
-
-        quartoDesafio();
-
     }
 
     // ------------------------------------- Partes V ( final)  -------------------------------------------------------------------
 
     static void finalI() throws Exception {
-
-
         Console("\n Após formar uma aliança com os Greyjoy e conquistar os mares, Daenerys lança um ataque conjunto com suas tropas terrestres e a poderosa frota Greyjoy contra a capital. Com o elemento surpresa e a superioridade numérica, eles conseguem romper as defesas inimigas e adentram a cidade. Daenerys lidera suas tropas com destreza, demonstrando coragem e estratégia.", TimeUnit.MILLISECONDS, temp_narrativa);
 
         Console("\n No confronto final, Daenerys enfrenta o atual ocupante do Trono de Ferro, derrotando-o com astúcia e força. A notícia de sua vitória se espalha rapidamente, e o povo dos Sete Reinos começa a aclamá-la como sua nova rainha. Ela é coroada, finalmente tomando posse do Trono de Ferro.", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -604,7 +475,6 @@ public class Jogo {
     }
 
     static void finalII()throws Exception {
-
         Console("\n Daenerys, determinada a conquistar o Trono de Ferro, lança um ataque brutal contra a capital. Os dragões são convocados e usados com fúria destrutiva, causando grande devastação na cidade e no exército inimigo. No entanto, a batalha se arrasta por semanas, causando um enorme custo humano e material para ambos os lados.", TimeUnit.MILLISECONDS, temp_narrativa);
 
         Console("\n Apesar de sua vitória, a cidade está em ruínas e muitas vidas foram perdidas. Daenerys se senta no Trono de Ferro, mas a alegria de sua conquista é manchada pela destruição e pelo peso das perdas sofridas. A população dos Sete Reinos olha para ela com medo e desconfiança, temendo que sua liderança seja marcada por mais violência e tirania.", TimeUnit.MILLISECONDS, temp_narrativa);
@@ -614,11 +484,7 @@ public class Jogo {
         Console("\n A reputação de Daenerys como a 'Rainha Quebradora de Correntes' é interpretada de forma negativa, com muitos vendo-a como uma tirana e uma conquistadora implacável. A paz e a prosperidade são meras ilusões, e o reinado de Daenerys é marcado por conflitos internos e rebeliões constantes.", TimeUnit.MILLISECONDS, temp_narrativa);
 
         Console("\n Ao final, Daenerys percebe que seu desejo pelo poder custou caro demais. O Trono de Ferro é seu, mas ela governa sobre um reino dilacerado.", TimeUnit.MILLISECONDS, temp_narrativa);
-
     }
-
-    
-
 
     // ----------------------------------------DESAFIOS MATEMÁTICA----------------------------------------
     static void primeiroDesafio() throws Exception {
@@ -627,109 +493,71 @@ public class Jogo {
         Scanner entrada = new Scanner(System.in);
 
         List<String> alternativas = new ArrayList<>();
-
         alternativas.add("11000111 e FA.");
-
         alternativas.add("11100111 e F9.");
-
         alternativas.add("11010111 e FA.");
-
         alternativas.add("11000111 e F9.");
-
         alternativas.add("11100111 e FA.");
-
-        // embaralha as alternativas
 
         Collections.shuffle(alternativas);
 
         String respostaCerta = "11000111 e FA.";
-
         do {
 
             Console(
                     "Os números decimais 199 e 250 correspondem, nos sistemas binário e hexadecimal, às seguintes representações: \n",  TimeUnit.MILLISECONDS, 100);
 
             for (int i = 0; i < alternativas.size(); i++) {
-
                 System.out.println("(" + (char)('a' + i) + ") " + alternativas.get(i));
-                 
-                
             }
 
             String selected = entrada.nextLine();
 
             switch (selected) {
-
                 case "a" -> {
-
                     if (alternativas.get(0)
                             .equals(respostaCerta)) {
 
                         System.out.println("Resposta correta");
                         return;
-
                     }
-
                 }
-
                 case "b" -> {
-
                     if (alternativas.get(1)
                             .equals(respostaCerta)) {
-
                         System.out.println("Resposta correta");
                         return;
-
                     }
-
                 }
-
                 case "c" -> {
-
                     if (alternativas.get(2)
                             .equals(respostaCerta)) {
 
                         System.out.println("Resposta correta");
                         return;
-
                     }
-
                 }
-
                 case "d" -> {
-
                     if (alternativas.get(3)
                             .equals(respostaCerta)) {
-
                         System.out.println("Resposta correta");
                         return;
-
                     }
-
                 }
-
                 case "e" -> {
-
                     if (alternativas.get(4)
                             .equals(respostaCerta)) {
 
                         System.out.println("Resposta correta");
                         return;
-
                     }
-
                 }
-
             }
 
-            // se a resposta selecionada estiver incorreta, as alternativas embaralham de novo
-
+            //Caso a resposta esteja incorreta embaralha de novo
             Collections.shuffle(alternativas);
-
             System.out.println("Resposta incorreta");
-
         } while (true);
-
     }
 
     static void segundoDesafio() throws Exception {
@@ -737,107 +565,68 @@ public class Jogo {
         Console("\n\n\n ATENÇÃO! Seu segundo desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
 				100);
 
-		Scanner entrada = new Scanner(System.in);
-
+	
 		List<String> alternativas = new ArrayList<>();
-
 		alternativas.add("4 e 8");
-
 		alternativas.add("3 e 6");
-
 		alternativas.add("4 e 12");
-
 		alternativas.add("2 e 4");
-
 		alternativas.add("4 e 6");
-
-		// embaralha as alternativas
-
 		Collections.shuffle(alternativas);
 
 		String respostaCerta = "4 e 8";
-
 		do {
-
+            
 			Console("As potências 2² e 2³ correspondem, respectivamente, às seguintes representações: \n",
 					TimeUnit.MILLISECONDS, 100);
 
 			for (int i = 0; i < alternativas.size(); i++) {
-
 				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
-
 			}
 
+            Scanner entrada = new Scanner(System.in);
+            entrada.close();
 			String selected = entrada.nextLine();
 
 			switch (selected) {
 
-			case "a" -> {
+                case "a" -> {
+                    if (alternativas.get(0).equals(respostaCerta)) {
+                        System.out.println("Resposta correta");
+                        return;
+                    }
+                }
+                case "b" -> {
+                    if (alternativas.get(1).equals(respostaCerta)) {
+                        System.out.println("Resposta correta");
+                        return;
+                    }
+                }
+                case "c" -> {
+                    if (alternativas.get(2).equals(respostaCerta)) {
+                        System.out.println("Resposta correta");
+                        return;
+                    }
+                }
+                case "d" -> {
+                    if (alternativas.get(3).equals(respostaCerta)) {
+                        System.out.println("Resposta correta");
+                        return;
+                    }
+                }
+                case "e" -> {
+                    if (alternativas.get(4).equals(respostaCerta)) {
 
-				if (alternativas.get(0).equals(respostaCerta)) {
+                        System.out.println("Resposta correta");
+                        return;
+                    }
+			    }
+            }
 
-					System.out.println("Resposta correta");
-					return;
-
-				}
-
-			}
-
-			case "b" -> {
-
-				if (alternativas.get(1).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					return;
-
-				}
-
-			}
-
-			case "c" -> {
-
-				if (alternativas.get(2).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					return;
-
-				}
-
-			}
-
-			case "d" -> {
-
-				if (alternativas.get(3).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					return;
-
-				}
-
-			}
-
-			case "e" -> {
-
-				if (alternativas.get(4).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-					return;
-
-				}
-
-			}
-
-			}
-
-			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
-			// novo
-
+			// Caso a resposta esteja errada embaralha de novo
 			Collections.shuffle(alternativas);
-
 			System.out.println("Resposta incorreta");
-
 		} while (true);
-
 	}
 
 
@@ -852,75 +641,54 @@ public class Jogo {
     
     public static void desafioFinalI() throws Exception {
 
-
         Console("Parabens, você chegou na parte Final !!!\n",
                 TimeUnit.MILLISECONDS, 100);
+
         Console("! \n Placar: " + numTerritorios, TimeUnit.MILLISECONDS, 20 );
-        Scanner entrada = new Scanner(System.in);
-    
+        
         List<String> alternativas = new ArrayList<>();
-    
         alternativas.add("26");
-    
         alternativas.add("39");
-    
         alternativas.add("3");
-    
         alternativas.add("13");
-    
         alternativas.add("169");
-    
-        // embaralha as alternativas
-    
         Collections.shuffle(alternativas);
     
         String respostaCerta = "13";
     
         do {
-    
             Console("\nQual a Raiz Quadrada de 169 ?\n\n",
                     TimeUnit.MILLISECONDS, 100);
     
-            for (int i = 0; i < alternativas.size(); i++) {
-    
+            for (int i = 0; i < alternativas.size(); i++) 
                 System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
-    
-            }
-    
+            
+            Scanner entrada = new Scanner(System.in);
             String selected = entrada.nextLine();
-    
+            entrada.close();
+
             switch (selected) {
-    
                 case "a" -> {
-    
                     if (alternativas.get(0).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         numTerritorios += 30;
                         return;
-    
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "b" -> {
-    
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         numTerritorios += 30;
                         return;
-    
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "c" -> {
-    
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -930,9 +698,7 @@ public class Jogo {
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "d" -> {
     
                     if (alternativas.get(3).equals(respostaCerta)) {
@@ -944,11 +710,8 @@ public class Jogo {
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "e" -> {
-    
                     if (alternativas.get(4).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -958,22 +721,14 @@ public class Jogo {
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
             }
-    
-            // se a resposta selecionada estiver incorreta, as alternativas embaralham de
-            // novo
-    
+
+			// Caso a resposta esteja errada embaralha de novo
             Collections.shuffle(alternativas);
-    
             System.out.println("Resposta incorreta");
     
         } while (true);
-    
-      
-    
     }
     
     public static void desafioFinalII() throws Exception {
@@ -985,54 +740,33 @@ public class Jogo {
         Scanner entrada = new Scanner(System.in);
     
         List<String> alternativas = new ArrayList<>();
-    
         alternativas.add("Isaac Newton");
-    
         alternativas.add("Albert Einsten");
-    
         alternativas.add("Pitágoras de Samos");
-    
         alternativas.add("Van Gogh");
-    
         alternativas.add("Leonardo da Vinci");
-    
-        // embaralha as alternativas
-    
         Collections.shuffle(alternativas);
-    
+
         String respostaCerta = "Pitágoras de Samos";
-    
         do {
-    
             Console("\nQuem é considerado o pai da matemática?\n\n",
                     TimeUnit.MILLISECONDS, 100);
     
-            for (int i = 0; i < alternativas.size(); i++) {
-    
+            for (int i = 0; i < alternativas.size(); i++) 
                 System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
     
-            }
-    
             String selected = entrada.nextLine();
-    
             switch (selected) {
-    
                 case "a" -> {
-    
                     if (alternativas.get(0).equals(respostaCerta)) {
-    
                         System.out.println("Resposta correta");
                         numTerritorios += 30;
                         return;
-    
                     }else {
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "b" -> {
-    
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -1042,11 +776,8 @@ public class Jogo {
                     }else{
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "c" -> {
-    
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -1056,11 +787,8 @@ public class Jogo {
                     }else{
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "d" -> {
-    
                     if (alternativas.get(3).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -1070,43 +798,28 @@ public class Jogo {
                     }else{
                         numTerritorios -= 10;
                     }
-    
                 }
-    
                 case "e" -> {
-    
                     if (alternativas.get(4).equals(respostaCerta)) {
-    
                         System.out.println("Resposta correta");
 
                         numTerritorios += 30;
-                       
                         return;
     
                     }else{
                         numTerritorios -= 10;
                     }
-    
                 }
-    
             }
     
-            // se a resposta selecionada estiver incorreta, as alternativas embaralham de
-            // novo
-    
+			// Caso a resposta esteja errada embaralha de novo
             Collections.shuffle(alternativas);
-    
             System.out.println("Resposta incorreta");
-    
         } while (true);
-    
     }
-
-
 
     // ------------------------------------- INSTRUÇÕES -------------------------------------------------------------------
     static void instrucoes() throws Exception {
-        Scanner entrada = new Scanner(System.in);
         int escolha_menu, temp_narrativa = 80;
 
         Console("\n O Jogo baseado no modo RPG Textual é uma troca de mensagens em que o jogador move a trama do ponto de vista do seu personagem atráves de uma pergunta respondida.\r\n\n A cada pergunta respondida o jogo dará opções de caminhos para explorar.\r\n\n Ou seja, Mantenha total atenção na hora de responder.\r\n",
@@ -1118,9 +831,12 @@ public class Jogo {
                 + "  ", TimeUnit.MILLISECONDS, temp_narrativa);
 
         do {
-            System.out.println();
             System.out.println("\n2 - Retornar ao menu");
+
+            Scanner entrada = new Scanner(System.in);
             escolha_menu = entrada.nextInt();
+            entrada.close();
+
             if (escolha_menu == 2) {
                 menu();
             } else {
@@ -1131,16 +847,18 @@ public class Jogo {
     // ------------------------------------- CRÉDITOS -------------------------------------------------------------------
 
     static void creditos() throws Exception {
-        Scanner entrada = new Scanner(System.in);
         int escolhaMenu, temp_narrativa = 80;
 
         Console("\n\n</> Desenvolvedores </>\n\n-> Ana \n-> Barbara \n-> Luana \n-> João Vitor",
                 TimeUnit.MILLISECONDS, temp_narrativa);
 
         do {
-            System.out.println();
             System.out.println("\n2 - Retornar ao menu");
+
+            Scanner entrada = new Scanner(System.in);
             escolhaMenu = entrada.nextInt();
+            entrada.close();
+
             if (escolhaMenu == 2) {
                 menu();
             } else {
@@ -1150,10 +868,8 @@ public class Jogo {
     }
     // ------------------------------------- FUNÇÕES -------------------------------------------------------------------
     
- // ------------------------------------- PARTE FINAL -------------------------------------------------------------------
+    // ------------------------------------- PARTE FINAL -------------------------------------------------------------------
     
- 
-
     public static void Console(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
             System.out.print(caractere);
