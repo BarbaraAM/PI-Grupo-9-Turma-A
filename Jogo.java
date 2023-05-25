@@ -401,32 +401,226 @@ public class Jogo {
        
 
     }
+    // ------------------------------------- Partes IV  -------------------------------------------------------------------
 
     static void parteIVdestinoI() throws Exception {
 
-        System.out.println("Cheguei na parte 4 DESTINO 1");
+        Console("\n\n Com seu exército exausto e faminto, Daenerys iniciou uma busca desesperada por alimentos e por um refúgio adequado para que todos pudessem se recuperar. ",
+                TimeUnit.MILLISECONDS,temp_narrativa);
+
+        Console("\n\n Após dias de marcha exaustiva, Sir Jorah avistou uma subida protegida por um rio, um local perfeito para proteger o grupo e proporcionar segurança natural.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Determinada a garantir a defesa, Daenerys organizou os arqueiros em pontos estratégicos para vigiar o confronto e estabeleceu um cronograma de patrulhas para monitorar a região. ",
+                TimeUnit.MILLISECONDS,temp_narrativa);
+
+        Console("\n\n Enquanto alguns soldados saíam para caçar e pescar, outros guardavam incansavelmente para montar o acampamento. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Com tudo ocorrendo conforme o planejado, Daenerys convocou uma reunião com Ellaria, Olenna e Sir Jorah para discutir o golpe final para conquistar o Trono de Ferro.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys declarou: "
+                + "\n - Chegou a hora de trazermos os dragões. Não podemos atacar a Capital sem eles. ",
+                TimeUnit.MILLISECONDS,temp_narrativa);
+
+        Console("\n\n Ellaria expressou suas preocupações: "
+                + "\n - Eu acredito que os dragões podem nos causar problemas. São animais perigosos, nossas tropas podem se assustar!",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Sir Jorah ponderou com sabedoria:"
+                + " \n - Os dragões simbolizam a força do novo reinado, mas devemos tratá-los com cautela. Precisamos de mais suprimentos para trazê-los.",
+                TimeUnit.MILLISECONDS,temp_narrativa);
+
+        Console("\n\n Escolha:"
+
+                + " \n 1. Trazer os dragões. "
+                + " \n 2. Atacar sem dragões. ", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Scanner entrada = new Scanner(System.in);
+        int escolhaIIIdestinoI = entrada.nextInt();
+
+        do {
+            if (escolhaIIIdestinoI == 1) {
+                numTerritorios += 20;
+
+                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, temp_narrativa);
+
+                Console("Ellaria e Sir Jorah refletem sobre as palavras da rainha e percebem a inteligência inabalável em seus olhos. ",
+                        TimeUnit.MILLISECONDS, temp_narrativa);
+
+                break;
+
+            } else if (escolhaIIIdestinoI == 2) {
+                numTerritorios += 0;
+
+                Console("Daenerys reconsidera:"
+                        + "\n Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.",
+                        TimeUnit.MILLISECONDS, temp_narrativa);
+
+                break;
+
+            } else {
+                System.out.println("Você não digitou uma resposta válida!");
+            }
+
+        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
+
+
+        Console("A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Olenna, uma mulher de grande sagacidade, acrescentou:"
+                + "\n A capital tem um trecho cercado pelo mar. Não temos tropas nem habilidades em batalhas marítimas.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys respondeu com um sorriso determinado:"
+                + "\n Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Ellaria expressou suas preocupações:"
+                + "\n Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Sir Jorah, conhecendo a importância de garantir aliados, acrescentou:"
+                + " \n Não queremos os Greyjoys como inimigos. Precisamos chegar a um acordo com eles, pois o contrário pode ser fatal para a nossa causa.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Com o passar dos dias, o exército continua se fortalecendo e se preparando para a batalha final."
+                + " \n Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
         quartoDesafio();
-        desafioFinalI();
-        
 
     }
 
     static void parteIVdestinoII() throws Exception {
 
-        System.out.println("Cheguei na parte 4 DESTINO 2");
+         Console("\n\n Com seu exército exausto e faminto, Daenerys iniciou uma busca desesperada por alimentos e por um refúgio adequado para que todos pudessem se recuperar. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Após dias de marcha exaustiva, Sir Jorah avistou uma subida protegida por um rio, um local perfeito para proteger o grupo e proporcionar segurança natural.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Determinada a garantir a defesa, Daenerys organizou os arqueiros em pontos estratégicos para vigiar o confronto e estabeleceu um cronograma de patrulhas para monitorar a região. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Enquanto alguns soldados saíam para caçar e pescar, outros guardavam incansavelmente para montar o acampamento. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Com tudo ocorrendo conforme o planejado, Daenerys convocou uma reunião com Ellaria, Olenna e Sir Jorah para discutir o golpe final para conquistar o Trono de Ferro.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys declarou: "
+                + "\n - Chegou a hora de trazermos os dragões. Não podemos atacar a Capital sem eles. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Ellaria expressou suas preocupações: "
+                + "\n - Eu acredito que os dragões podem nos causar problemas. São animais perigosos, nossas tropas podem se assustar!",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Sir Jorah ponderou com sabedoria:"
+                + " \n - Os dragões simbolizam a força do novo reinado, mas devemos tratá-los com cautela. Precisamos de mais suprimentos para trazê-los.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Escolha:"
+
+                + " \n 1. Trazer os dragões. "
+                + " \n 2. Atacar sem dragões. ", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Scanner entrada = new Scanner(System.in);
+
+
+        int escolhaIIIdestinoI = entrada.nextInt();
+
+        do {
+            if (escolhaIIIdestinoI == 1) {
+                numTerritorios += 20;
+
+                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
+                        + numTerritorios, TimeUnit.MILLISECONDS, temp_narrativa);
+
+                Console("Ellaria e Sir Jorah refletem sobre as palavras da rainha e percebem a inteligência inabalável em seus olhos. ",
+                        TimeUnit.MILLISECONDS, temp_narrativa);
+
+                break;
+
+            } else if (escolhaIIIdestinoI == 2) {
+                numTerritorios += 0;
+
+                Console("Daenerys reconsidera:"
+                        + "\n Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.",
+                        TimeUnit.MILLISECONDS, temp_narrativa);
+
+                break;
+
+            } else {
+                System.out.println("Você não digitou uma resposta válida!");
+            }
+
+        } while (escolhaIIIdestinoI != 1 || escolhaIIIdestinoI != 2);
+        
+
+        Console("\n\n A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Olenna, uma mulher de grande sagacidade, acrescentou:"
+                + "\n A capital tem um trecho cercado pelo mar. Não temos tropas nem habilidades em batalhas marítimas.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Daenerys respondeu com um sorriso determinado:"
+                + "\n Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Ellaria expressou suas preocupações:"
+                + "\n Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Sir Jorah, conhecendo a importância de garantir aliados, acrescentou:"
+                + " \n Não queremos os Greyjoys como inimigos. Precisamos chegar a um acordo com eles, pois o contrário pode ser fatal para a nossa causa.",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n\n Com o passar dos dias, o exército continua se fortalecendo e se preparando para a batalha final."
+                + " \n Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ",
+                TimeUnit.MILLISECONDS, temp_narrativa);
+
         quartoDesafio();
-        desafioFinalII();
 
     }
- 
 
-    // ------------------------------------- Partes IV  -------------------------------------------------------------------
-
-    
     // ------------------------------------- Partes V ( final)  -------------------------------------------------------------------
 
+    static void finalI() throws Exception {
 
-    // ----------------------------------------Desafios Matematica----------------------------------------
+
+        Console("\n Após formar uma aliança com os Greyjoy e conquistar os mares, Daenerys lança um ataque conjunto com suas tropas terrestres e a poderosa frota Greyjoy contra a capital. Com o elemento surpresa e a superioridade numérica, eles conseguem romper as defesas inimigas e adentram a cidade. Daenerys lidera suas tropas com destreza, demonstrando coragem e estratégia.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n No confronto final, Daenerys enfrenta o atual ocupante do Trono de Ferro, derrotando-o com astúcia e força. A notícia de sua vitória se espalha rapidamente, e o povo dos Sete Reinos começa a aclamá-la como sua nova rainha. Ela é coroada, finalmente tomando posse do Trono de Ferro.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n Com o controle da capital e o apoio das principais casas, Daenerys inicia um período de reconstrução e estabilidade nos Sete Reinos. Ela implementa reformas sociais e políticas, garantindo justiça e igualdade para todos. A paz começa a ser restabelecida, e a influência dos dragões e do novo reinado de Daenerys é sentida em todo o reino.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n Daenerys governa com sabedoria e benevolência, procurando apaziguar as tensões e reconciliar os diferentes povos dos Sete Reinos. Ela se torna uma rainha amada e respeitada, e seu reinado é lembrado como uma era de progresso, justiça e harmonia.", TimeUnit.MILLISECONDS, temp_narrativa);
+    }
+
+    static void finalII()throws Exception {
+
+        Console("\n Daenerys, determinada a conquistar o Trono de Ferro, lança um ataque brutal contra a capital. Os dragões são convocados e usados com fúria destrutiva, causando grande devastação na cidade e no exército inimigo. No entanto, a batalha se arrasta por semanas, causando um enorme custo humano e material para ambos os lados.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n Apesar de sua vitória, a cidade está em ruínas e muitas vidas foram perdidas. Daenerys se senta no Trono de Ferro, mas a alegria de sua conquista é manchada pela destruição e pelo peso das perdas sofridas. A população dos Sete Reinos olha para ela com medo e desconfiança, temendo que sua liderança seja marcada por mais violência e tirania.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n Enquanto tenta governar, Daenerys enfrenta uma série de rebeliões e resistência por parte das casas nobres e do povo comum, que estão descontentes com seu reinado sangrento. Ela luta para manter o controle e a estabilidade, mas a desconfiança generalizada e o ressentimento persistem.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n A reputação de Daenerys como a 'Rainha Quebradora de Correntes' é interpretada de forma negativa, com muitos vendo-a como uma tirana e uma conquistadora implacável. A paz e a prosperidade são meras ilusões, e o reinado de Daenerys é marcado por conflitos internos e rebeliões constantes.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+        Console("\n Ao final, Daenerys percebe que seu desejo pelo poder custou caro demais. O Trono de Ferro é seu, mas ela governa sobre um reino dilacerado.", TimeUnit.MILLISECONDS, temp_narrativa);
+
+    }
+
+    
+
+
+    // ----------------------------------------DESAFIOS MATEMÁTICA----------------------------------------
     static void primeiroDesafio() throws Exception {
         Console("\n\n\n ATENÇÃO! seu primeiro desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS, 100);
 
@@ -648,248 +842,14 @@ public class Jogo {
 
 
     static void terceiroDesafio() throws Exception {
-        Console("\n\n\n ATENÇÃO! Seu terceiro desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
-				100);
        
-        Scanner entrada = new Scanner(System.in);
-
-
-		List<String> alternativas = new ArrayList<>();
-
-		alternativas.add("2 + 3i e 1 – i");
-
-		alternativas.add("3 + 2i e -4 – i");
-
-		alternativas.add("4 + 3i e 2 – i");
-
-		alternativas.add("1 + 2i e -3 – i");
-
-		alternativas.add("2 + 3i e -1 – i");
-
-		// embaralha as alternativas
-
-		Collections.shuffle(alternativas);
-
-		String respostaCerta = "4 + 3i e 2 – i";
-
-		do {
-
-			Console("Qual o resultado obtido com a realização da soma e da subtração, respectivamente, dos números complexos z1 = 3 + i e z2 = 1 + 2i?: \n",
-					TimeUnit.MILLISECONDS, 100);
-
-			for (int i = 0; i < alternativas.size(); i++) {
-
-				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
-
-			}
-
-			String selected = entrada.nextLine();
-
-			switch (selected) {
-
-			case "a" -> {
-
-				if (alternativas.get(0).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "b" -> {
-
-				if (alternativas.get(1).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "c" -> {
-
-				if (alternativas.get(2).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "d" -> {
-
-				if (alternativas.get(3).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "e" -> {
-
-				if (alternativas.get(4).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			}
-
-			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
-			// novo
-
-			Collections.shuffle(alternativas);
-
-			System.out.println("Resposta incorreta");
-
-		} while (true);
     }
 
     static void quartoDesafio() throws Exception {
-        Console("\n\n\n ATENÇÃO! Seu terceiro desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
-				100);
 
-		Scanner entrada = new Scanner(System.in);
-
-		List<String> alternativas = new ArrayList<>();
-
-		alternativas.add("-2 + i e -2 – i");
-
-		alternativas.add("-1 + i e -1 – i");
-
-		alternativas.add("-2 + i e -1 + i");
-
-		alternativas.add("-1 + 2i e -1 + i");
-
-		alternativas.add("2 + 3i e -1 – i");
-
-		// embaralha as alternativas
-
-		Collections.shuffle(alternativas);
-
-		String respostaCerta = "-2 + i e -2 – i";
-
-		do {
-
-			Console("Quais os valores de x que resolvem a equação do 2º grau x2 + 4x + 5? (Lembre-se que i2 = -1). \n",
-					TimeUnit.MILLISECONDS, 100);
-
-			for (int i = 0; i < alternativas.size(); i++) {
-
-				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
-
-			}
-
-			String selected = entrada.nextLine();
-
-			switch (selected) {
-
-			case "a" -> {
-
-				if (alternativas.get(0).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "b" -> {
-
-				if (alternativas.get(1).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "c" -> {
-
-				if (alternativas.get(2).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "d" -> {
-
-				if (alternativas.get(3).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			case "e" -> {
-
-				if (alternativas.get(4).equals(respostaCerta)) {
-
-					System.out.println("Resposta correta");
-                    numTerritorios += 30;
-					return;
-
-				}else {
-                    numTerritorios -= 10;
-                }
-
-			}
-
-			}
-
-			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
-			// novo
-
-			Collections.shuffle(alternativas);
-
-			System.out.println("Resposta incorreta");
-
-		} while (true);
     }
 
+    
     public static void desafioFinalI() throws Exception {
 
 
@@ -1044,7 +1004,7 @@ public class Jogo {
     
         do {
     
-            Console("\nQuem é considerado o pai da matamática ?\n\n",
+            Console("\nQuem é considerado o pai da matemática?\n\n",
                     TimeUnit.MILLISECONDS, 100);
     
             for (int i = 0; i < alternativas.size(); i++) {
