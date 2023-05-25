@@ -313,7 +313,7 @@ public class Jogo {
 
         Scanner entrada = new Scanner(System.in);
 		int escolhaIIIdestinoI = entrada.nextInt();
-        entrada.close();
+       
 
         do {
             if (escolhaIIIdestinoI == 1) {
@@ -350,7 +350,7 @@ public class Jogo {
     static void parteIIIdestinoII() throws Exception {
 
         System.out.println("Cheguei na parte 3");
-
+    
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
         Console("Então Daenerys com seu exército decide Retaliar o ataque inimigo, porem seu exército não estava com todas as suas forças, pois acabaram de sair de uma batalha."
             , TimeUnit.MILLISECONDS, 50);
@@ -367,7 +367,7 @@ public class Jogo {
 
         Scanner entrada = new Scanner(System.in);
 		int escolhaIIIdestinoI = entrada.nextInt();
-        entrada.close();
+        //entrada.close();
 
         do {
             if (escolhaIIIdestinoI == 1) {
@@ -376,7 +376,7 @@ public class Jogo {
                 Console("Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: "
                         + numTerritorios, TimeUnit.MILLISECONDS, 50);
     
-          //      terceiroDesafio();
+                quartoDesafio();
                 parteIVdestinoI();
     
                 break;
@@ -388,7 +388,7 @@ public class Jogo {
                         + numTerritorios, TimeUnit.MILLISECONDS, 50);
     
             //1
-                terceiroDesafio();
+                quartoDesafio();
                 parteIVdestinoII();
     
                 break;
@@ -405,6 +405,7 @@ public class Jogo {
     static void parteIVdestinoI() throws Exception {
 
         System.out.println("Cheguei na parte 4 DESTINO 1");
+        quartoDesafio();
         desafioFinalI();
         
 
@@ -413,6 +414,7 @@ public class Jogo {
     static void parteIVdestinoII() throws Exception {
 
         System.out.println("Cheguei na parte 4 DESTINO 2");
+        quartoDesafio();
         desafioFinalII();
 
     }
@@ -647,12 +649,245 @@ public class Jogo {
 
     static void terceiroDesafio() throws Exception {
         Console("\n\n\n ATENÇÃO! Seu terceiro desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
-        100);
+				100);
+       
+        Scanner entrada = new Scanner(System.in);
 
+
+		List<String> alternativas = new ArrayList<>();
+
+		alternativas.add("2 + 3i e 1 – i");
+
+		alternativas.add("3 + 2i e -4 – i");
+
+		alternativas.add("4 + 3i e 2 – i");
+
+		alternativas.add("1 + 2i e -3 – i");
+
+		alternativas.add("2 + 3i e -1 – i");
+
+		// embaralha as alternativas
+
+		Collections.shuffle(alternativas);
+
+		String respostaCerta = "4 + 3i e 2 – i";
+
+		do {
+
+			Console("Qual o resultado obtido com a realização da soma e da subtração, respectivamente, dos números complexos z1 = 3 + i e z2 = 1 + 2i?: \n",
+					TimeUnit.MILLISECONDS, 100);
+
+			for (int i = 0; i < alternativas.size(); i++) {
+
+				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+			}
+
+			String selected = entrada.nextLine();
+
+			switch (selected) {
+
+			case "a" -> {
+
+				if (alternativas.get(0).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "b" -> {
+
+				if (alternativas.get(1).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "c" -> {
+
+				if (alternativas.get(2).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "d" -> {
+
+				if (alternativas.get(3).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "e" -> {
+
+				if (alternativas.get(4).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			}
+
+			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
+			// novo
+
+			Collections.shuffle(alternativas);
+
+			System.out.println("Resposta incorreta");
+
+		} while (true);
     }
 
     static void quartoDesafio() throws Exception {
+        Console("\n\n\n ATENÇÃO! Seu terceiro desafio matemático começará em: \n 3 \n 2 \n 1 \n", TimeUnit.MILLISECONDS,
+				100);
 
+		Scanner entrada = new Scanner(System.in);
+
+		List<String> alternativas = new ArrayList<>();
+
+		alternativas.add("-2 + i e -2 – i");
+
+		alternativas.add("-1 + i e -1 – i");
+
+		alternativas.add("-2 + i e -1 + i");
+
+		alternativas.add("-1 + 2i e -1 + i");
+
+		alternativas.add("2 + 3i e -1 – i");
+
+		// embaralha as alternativas
+
+		Collections.shuffle(alternativas);
+
+		String respostaCerta = "-2 + i e -2 – i";
+
+		do {
+
+			Console("Quais os valores de x que resolvem a equação do 2º grau x2 + 4x + 5? (Lembre-se que i2 = -1). \n",
+					TimeUnit.MILLISECONDS, 100);
+
+			for (int i = 0; i < alternativas.size(); i++) {
+
+				System.out.println("(" + (char) ('a' + i) + ") " + alternativas.get(i));
+
+			}
+
+			String selected = entrada.nextLine();
+
+			switch (selected) {
+
+			case "a" -> {
+
+				if (alternativas.get(0).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "b" -> {
+
+				if (alternativas.get(1).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "c" -> {
+
+				if (alternativas.get(2).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "d" -> {
+
+				if (alternativas.get(3).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			case "e" -> {
+
+				if (alternativas.get(4).equals(respostaCerta)) {
+
+					System.out.println("Resposta correta");
+                    numTerritorios += 30;
+					return;
+
+				}else {
+                    numTerritorios -= 10;
+                }
+
+			}
+
+			}
+
+			// se a resposta selecionada estiver incorreta, as alternativas embaralham de
+			// novo
+
+			Collections.shuffle(alternativas);
+
+			System.out.println("Resposta incorreta");
+
+		} while (true);
     }
 
     public static void desafioFinalI() throws Exception {
@@ -701,8 +936,11 @@ public class Jogo {
                     if (alternativas.get(0).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
+                        numTerritorios += 30;
                         return;
     
+                    }else {
+                        numTerritorios -= 10;
                     }
     
                 }
@@ -712,8 +950,11 @@ public class Jogo {
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
+                        numTerritorios += 30;
                         return;
     
+                    }else {
+                        numTerritorios -= 10;
                     }
     
                 }
@@ -723,8 +964,11 @@ public class Jogo {
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
+                        numTerritorios += 30;
                         return;
     
+                    }else {
+                        numTerritorios -= 10;
                     }
     
                 }
@@ -734,8 +978,11 @@ public class Jogo {
                     if (alternativas.get(3).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
+                        numTerritorios += 30;
                         return;
     
+                    }else {
+                        numTerritorios -= 10;
                     }
     
                 }
@@ -745,8 +992,11 @@ public class Jogo {
                     if (alternativas.get(4).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
+                        numTerritorios += 30;
                         return;
     
+                    }else {
+                        numTerritorios -= 10;
                     }
     
                 }
@@ -767,10 +1017,6 @@ public class Jogo {
     }
     
     public static void desafioFinalII() throws Exception {
-
-
-     
-
     
         Console("Parabens, você chegou na parte Final !!!!!\n",
                 TimeUnit.MILLISECONDS, 100);
