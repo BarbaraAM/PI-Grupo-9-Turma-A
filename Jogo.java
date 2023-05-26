@@ -464,7 +464,7 @@ public class Jogo {
             String selected = entrada.nextLine();
 
             switch (selected) {
-                case "a" -> {
+                case "a": {
                     //se alternativa for igual a resposta certa
                     if (alternativas.get(0)
                             .equals(respostaCerta)) {
@@ -473,14 +473,14 @@ public class Jogo {
                         return;
                     }
                 }
-                case "b" -> {
+                case "b": {
                     if (alternativas.get(1)
                             .equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "c" -> {
+                case "c": {
                     if (alternativas.get(2)
                             .equals(respostaCerta)) {
 
@@ -488,14 +488,14 @@ public class Jogo {
                         return;
                     }
                 }
-                case "d" -> {
+                case "d": {
                     if (alternativas.get(3)
                             .equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "e" -> {
+                case "e": {
                     if (alternativas.get(4)
                             .equals(respostaCerta)) {
 
@@ -539,31 +539,31 @@ public class Jogo {
 
 			switch (selected) {
 
-                case "a" -> {
+                case "a": {
                     if (alternativas.get(0).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "b" -> {
+                case "b": {
                     if (alternativas.get(1).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "c" -> {
+                case "c": {
                     if (alternativas.get(2).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "d" -> {
+                case "d": {
                     if (alternativas.get(3).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "e" -> {
+                case "e": {
                     if (alternativas.get(4).equals(respostaCerta)) {
 
                         System.out.println("Resposta correta");
@@ -617,7 +617,7 @@ public class Jogo {
 
             switch (selected) {
 
-                case "a" -> {
+                case "a": {
 
                     if (alternativas.get(0).equals(respostaCerta)) {
 
@@ -628,7 +628,7 @@ public class Jogo {
 
                 }
 
-                case "b" -> {
+                case "b": {
 
                     if (alternativas.get(1).equals(respostaCerta)) {
 
@@ -639,7 +639,7 @@ public class Jogo {
 
                 }
 
-                case "c" -> {
+                case "c": {
 
                     if (alternativas.get(2).equals(respostaCerta)) {
 
@@ -650,7 +650,7 @@ public class Jogo {
 
                 }
 
-                case "d" -> {
+                case "d": {
 
                     if (alternativas.get(3).equals(respostaCerta)) {
 
@@ -661,7 +661,7 @@ public class Jogo {
 
                 }
 
-                case "e" -> {
+                case "e": {
 
                     if (alternativas.get(4).equals(respostaCerta)) {
 
@@ -720,7 +720,7 @@ public class Jogo {
 
             switch (selected) {
 
-                case "a" -> {
+                case "a": {
 
                     if (alternativas.get(0).equals(respostaCerta)) {
 
@@ -731,7 +731,7 @@ public class Jogo {
 
                 }
 
-                case "b" -> {
+                case "b": {
 
                     if (alternativas.get(1).equals(respostaCerta)) {
 
@@ -742,7 +742,7 @@ public class Jogo {
 
                 }
 
-                case "c" -> {
+                case "c": {
 
                     if (alternativas.get(2).equals(respostaCerta)) {
 
@@ -753,7 +753,7 @@ public class Jogo {
 
                 }
 
-                case "d" -> {
+                case "d": {
 
                     if (alternativas.get(3).equals(respostaCerta)) {
 
@@ -764,7 +764,7 @@ public class Jogo {
 
                 }
 
-                case "e" -> {
+                case "e": {
 
                     if (alternativas.get(4).equals(respostaCerta)) {
 
@@ -812,28 +812,28 @@ public class Jogo {
             String selected = entrada.nextLine();
 
             switch (selected) {
-                case "a" -> {
+                case "a": {
                     if (alternativas.get(0).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "b" -> {
+                case "b": {
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "c" -> {
+                case "c": {
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "d" -> {
+                case "d": {
     
                     if (alternativas.get(3).equals(respostaCerta)) {
     
@@ -841,7 +841,7 @@ public class Jogo {
                         return;
                     }
                 }
-                case "e" -> {
+                case "e": {
                     if (alternativas.get(4).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
@@ -883,34 +883,34 @@ public class Jogo {
             String selected = entrada.nextLine();
 
             switch (selected) {
-                case "a" -> {
+                case "a": {
                     if (alternativas.get(0).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "b" -> {
+                case "b": {
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "c" -> {
+                case "c": {
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "d" -> {
+                case "d": {
                     if (alternativas.get(3).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
                         return;
                     }
                 }
-                case "e" -> {
+                case "e": {
                     if (alternativas.get(4).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
                         return;
@@ -952,7 +952,7 @@ public class Jogo {
     static void creditos() throws Exception {
         int escolhaMenu;
 
-        Console("\n\n</> Desenvolvedores </>\n\n-> Ana \n-> Barbara \n-> Luana \n-> João Vitor");
+        Console("\n\n</> Desenvolvedores </>\n -> Ana Karolyne da Silva-> Barbara de Argolo Melo -> Luana Figueiredo de Andrade Caboz-> João Vitor Araujo de Matos");
 
         do {
             System.out.println("\n2 - Retornar ao menu");
