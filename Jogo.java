@@ -361,6 +361,9 @@ public class Jogo {
             } else if (escolha == 2) {
                 numTerritorios += 0;
 
+                Console("\n Você não teve pontos!  \n Placar: ");
+
+
                 Console("\n Daenerys reconsidera:"
                         + "\n - Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.");
 
@@ -436,6 +439,7 @@ public class Jogo {
         Console("\n\n\n ATENÇÃO! seu primeiro desafio matemático começará em: \n 3 \n 2 \n 1 \n");
 
 
+        //lista de alternativas
         List<String> alternativas = new ArrayList<>();
         alternativas.add("11000111 e FA.");
         alternativas.add("11100111 e F9.");
@@ -446,10 +450,12 @@ public class Jogo {
         Collections.shuffle(alternativas);
 
         String respostaCerta = "11000111 e FA.";
+
+        
         do {
 
             Console("Os números decimais 199 e 250 correspondem, nos sistemas binário e hexadecimal, às seguintes representações: \n");
-
+            //busca a alternativa no do while
             for (int i = 0; i < alternativas.size(); i++) 
                 System.out.println("(" + (char)('a' + i) + ") " + alternativas.get(i));
             
@@ -459,6 +465,7 @@ public class Jogo {
 
             switch (selected) {
                 case "a" -> {
+                    //se alternativa for igual a resposta certa
                     if (alternativas.get(0)
                             .equals(respostaCerta)) {
 
