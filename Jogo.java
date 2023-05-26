@@ -53,7 +53,6 @@ public class Jogo {
         do {
             Scanner entrada = new Scanner(System.in);
             escolhaMenu = entrada.nextInt();
-            entrada.close();
 
             if (escolhaMenu == 1) {
                 parteI();
@@ -67,21 +66,22 @@ public class Jogo {
             } else {
                 System.out.println("\nOpção inválida, digite novamente: ");
             }
-        } while (escolhaMenu != 1 && escolhaMenu != 2 && escolhaMenu != 3 && escolhaMenu != 4 && escolhaMenu != 5);
+        } while (escolhaMenu != 1 && escolhaMenu != 2 && escolhaMenu != 3 && escolhaMenu != 4);
     }
 
     // ------------------------------------- PARTE I -------------------------------------------------------------------
 
     static void parteI() throws Exception {
 
-        Console("\n 1Em meio a uma batalha pelo Trono de Ferro, Daenerys Targaryen recebe visitas que podem mudar completamente o rumo dos acontecimentos. Olenna Tyrell, em busca de vingança contra Cersei Lannister, e Ellaria Sand com as Serpentes da Areia, ambas com o mesmo objetivo, se unem a Daenerys em uma reunião de conselho. "
+
+        Console("\n Em meio a uma batalha pelo Trono de Ferro, Daenerys Targaryen recebe visitas que podem mudar completamente o rumo dos acontecimentos. Olenna Tyrell, em busca de vingança contra Cersei Lannister, e Ellaria Sand com as Serpentes da Areia, ambas com o mesmo objetivo, se unem a Daenerys em uma reunião de conselho. "
                 + "\n\n Daenerys, olhando para as duas mulheres, pergunta com curiosidade: \n - O que traz vocês duas até aqui? E como podemos ser úteis umas às outras?");
 
-        Console("\n\n Olenna responde com sagacidade: \n - Eu quero vingança contra Cersei Lannister, mas estou ciente de que sozinha não tenho força para derrubá-la. Você, Daenerys, é uma líder poderosa com um exército forte. Sei que podemos ajudar um ao outro.");
+        Console("\n\n Olenna responde com sagacidade: \n - Eu quero vingança contra Cersei Lannister, mas estou ciente de que sozinha não tenho força para derrubá-la. Você, Daenerys, é uma líder poderosa com um exército forte. Sei que podemos ajudar uma a outra.");
 
         Console("\n\n Ellaria acrescenta: \n - Eu também quero vingança contra Cersei Lannister, ela assassinou meu amado Oberyn. Juntos, podemos acabar com o reinado dela e colocar um fim em sua crueldade.");
 
-        Console("\n\n Daenerys olha para as duas mulheres e decide que pode contar com elas para vencer a guerra: \n - Vocês têm meu apoio. Juntos, podemos derrotar Cersei Lannister e colocar fim à sua tirania.");
+        Console("\n\n Daenerys olha para as duas mulheres e decide que pode contar com elas para vencer a guerra: \n - Vocês têm meu apoio. Juntas, podemos derrotar Cersei Lannister e colocar fim à sua tirania.");
 
         Console("\n\n Em seguida, a reunião de conselho começa, e Daenerys ouve com atenção as sugestões de seus aliados sobre o que fazer em relação ao exército Lannister que está na região de Correrrio.");
 
@@ -91,11 +91,11 @@ public class Jogo {
         Console("\n\n - [1] Poupar Recursos ou [2] Atacar Território!");
 
         int escolha;
+
         do {
             Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
-            entrada.close();
-
+        
             if (escolha == 1) {
                 numTerritorios += 20;
 
@@ -116,8 +116,9 @@ public class Jogo {
             } else {
                 System.out.println("Você não digitou uma resposta válida!");
             }
-        } while (escolha != 1 || escolha != 2);
-
+            
+        } while (escolha != 1 && escolha != 2);
+       
     }
 
     // ------------------------------------- Partes II  -------------------------------------------------------------------
@@ -149,7 +150,6 @@ public class Jogo {
 		do {
             Scanner entrada = new Scanner(System.in);
 			escolha = entrada.nextInt();
-            entrada.close();
 
 			if (escolha == 1) {
 				numTerritorios += 10;
@@ -210,7 +210,6 @@ public class Jogo {
 		do {
             Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
-            entrada.close();
 
             if (escolha == 1) {
                 numTerritorios += 10;
@@ -241,12 +240,12 @@ public class Jogo {
 
     static void parteIIIdestinoI() throws Exception {
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
-        Console("Assim que Daenerys decidi fugir do ataque surpresa de Cersei, a mesma consegue proteger inúmeras vidas de suas tropas que morreriam em batalha. ");
-        Console("Daenerys passa a ser cada vez mais respeitada por suas sábias decisões no campo de batalha!");
-        Console("Olenna diz que não deveriam deixar o ataque de surpresa de Cersei de nada e que deveríamos pensar em um plano para atacar Cersei.");
-        Console("Mas seu cavaleiro Jorah diz que na situação atual o melhor seria economizar recursos, cuidar dos feridos e deixar nossas tropas mais forte!");
+        Console("\n Assim que Daenerys decidi fugir do ataque surpresa de Cersei, a mesma consegue proteger inúmeras vidas de suas tropas que morreriam em batalha. ");
+        Console("\n Daenerys passa a ser cada vez mais respeitada por suas sábias decisões no campo de batalha!");
+        Console("\n Olenna diz que não deveriam deixar o ataque de surpresa de Cersei de nada e que deveríamos pensar em um plano para atacar Cersei.");
+        Console("\n Mas seu cavaleiro Jorah diz que na situação atual o melhor seria economizar recursos, cuidar dos feridos e deixar nossas tropas mais forte!");
 
-        Console("[1] Atacar Cersei ou [2]Poupar recursos! ");
+        Console("\n\n [1] Atacar Cersei ou [2]Poupar recursos! ");
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
         int escolha;
@@ -254,12 +253,11 @@ public class Jogo {
         do {
             Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
-            entrada.close();
 
             if (escolha == 1) {
                 numTerritorios += 20;
     
-                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: " + numTerritorios);
+                Console("\n Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: " + numTerritorios);
            
                 terceiroDesafio();
                 parteIV();
@@ -268,7 +266,7 @@ public class Jogo {
             } else if (escolha == 2) {
                 numTerritorios += 10;
 
-                Console("Boa escolha, recuar te fez poupar recursos e adquirir 10 pontos! \n Placar: " + numTerritorios);
+                Console("\n Boa escolha, recuar te fez poupar recursos e adquirir 10 pontos! \n Placar: " + numTerritorios);
                     
                 terceiroDesafio();
                 parteIV();
@@ -283,11 +281,11 @@ public class Jogo {
 
     static void parteIIIdestinoII() throws Exception {
         /*COMEÇO DA HISTORIA DA PARTE 3 DESTINO 1 */
-        Console("Então Daenerys com seu exército decide Retaliar o ataque inimigo, porem seu exército não estava com todas as suas forças, pois acabaram de sair de uma batalha.");
-        Console("Isso fez com o exército de Cersei que era menor que o exército de Daenerys tivessem o mesmo nível de força, então o menor erro poderia ditar o destino dessa batalha!");
-        Console("Daenerys percebe que seu cavaleiro Jorah esta lutando contra dois inimigos ao mesmo tempo, e decidi ir ajudá-lo, quando de repente escuta um grito e percebe que sua aliada Ellaria esta com um ferimento na perna e não consegue se mexer.");
-        Console("Por isso Daenerys tem que fazer uma escolha, ajudar Jorah que esta lutando contra dois inimigos sozinho, ou ajudar Ellaria que esta com a perna ferida!");
-        Console("[1] Ajudar Jorah ou [2] Ajudar Ellaria.");
+        Console("\n Então Daenerys com seu exército decide Retaliar o ataque inimigo, porem seu exército não estava com todas as suas forças, pois acabaram de sair de uma batalha.");
+        Console("\n Isso fez com o exército de Cersei que era menor que o exército de Daenerys tivessem o mesmo nível de força, então o menor erro poderia ditar o destino dessa batalha!");
+        Console("\n Daenerys percebe que seu cavaleiro Jorah esta lutando contra dois inimigos ao mesmo tempo, e decide ir ajudá-lo, quando de repente escuta um grito e percebe que sua aliada Ellaria está com um ferimento na perna e não consegue se mexer.");
+        Console("\n Por isso Daenerys tem que fazer uma escolha, ajudar Jorah que está lutando contra dois inimigos sozinho, ou ajudar Ellaria que está com a perna ferida!");
+        Console("\n\n [1] Ajudar Jorah ou [2] Ajudar Ellaria.");
 
         /*FINAL DA HISTORIA DA PARTE 3 DESTINO 1 */
 
@@ -295,12 +293,11 @@ public class Jogo {
         do {
             Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
-            entrada.close();
 
             if (escolha == 1) {
                 numTerritorios += 20;
     
-                Console("Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: " + numTerritorios);
+                Console("\n Boa escolha, partir te fez poupar recursos e adquirir 20 pontos! \n Placar: " + numTerritorios);
     
                 quartoDesafio();
                 parteIV();
@@ -309,7 +306,7 @@ public class Jogo {
             } else if (escolha == 2) {
                 numTerritorios += 10;
     
-                Console("Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 10 pontos! \n Placar: " + numTerritorios);
+                Console("\n Decisão corajosa! As tropas foram contidas e avançamos no território, você recebeu 10 pontos! \n Placar: " + numTerritorios);
     
                 quartoDesafio();
                 parteIV();
@@ -344,40 +341,37 @@ public class Jogo {
                 + " \n - Os dragões simbolizam a força do novo reinado, mas devemos tratá-los com cautela. Precisamos de mais suprimentos para trazê-los.");
 
         Console("\n\n Escolha:"
-                + " \n 1. Trazer os dragões. "
-                + " \n 2. Atacar sem dragões. ");
+                + " \n [1 ]Trazer os dragões ou [2] Atacar sem dragões ");
 
         int escolha;
 
         do {
             Scanner entrada = new Scanner(System.in);
             escolha = entrada.nextInt();
-            entrada.close();
 
             if (escolha == 1) {
                 numTerritorios += 20;
 
-                Console("Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
+                Console("\n Decisão corajosa! As tropas foram derrotadas e avançamos no território, você recebeu 20 pontos! \n Placar: "
                         + numTerritorios);
 
-                Console("Ellaria e Sir Jorah refletem sobre as palavras da rainha e percebem a inteligência inabalável em seus olhos. ");
+                Console("\n Ellaria e Sir Jorah refletem sobre as palavras da rainha e percebem a inteligência inabalável em seus olhos. ");
 
                 break;
             } else if (escolha == 2) {
                 numTerritorios += 0;
 
-                Console("Daenerys reconsidera:"
-                        + "\n Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.");
+                Console("\n Daenerys reconsidera:"
+                        + "\n - Temos força suficiente por terra, tivemos sucesso até aqui, conseguiremos sem os dragões e com a confiança das tropas.");
 
                 break;
             } else {
-                System.out.println("Você não digitou uma resposta válida!");
+                System.out.println("\n Você não digitou uma resposta válida!");
             }
 
         } while (escolha != 1 || escolha != 2);
 
-        quartoDesafio();
-
+     
         parteV();
 
     }
@@ -390,19 +384,19 @@ public class Jogo {
         Console("A proposta de Daenerys de utilizar os territórios conquistados estrategicamente para cercar a capital e invadir por todos os lados foi ouvida com atenção pelos presentes. ");
 
         Console("\n\n Olenna, uma mulher de grande sagacidade, acrescentou:"
-                + "\n A capital tem um trecho cercado pelo mar. Não temos tropas nem habilidades em batalhas marítimas.");
+                + "\n - A capital tem um trecho cercado pelo mar. Não temos tropas nem habilidades em batalhas marítimas.");
 
         Console("\n\n Daenerys respondeu com um sorriso determinado:"
-                + "\n Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.");
+                + "\n - Exatamente, Olenna. Por esse motivo, vou me reunir com Yara e Euron Greyjoy para discutirmos uma aliança nessa guerra.");
 
         Console("\n\n Ellaria expressou suas preocupações:"
-                + "\n Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.");
+                + "\n - Ouvi rumores de que Cersei recebeu acordos para Euron. No entanto, Yara guarda um forte rancor dos Lannisters e se recusa a apoiá-los.");
 
         Console("\n\n Sir Jorah, conhecendo a importância de garantir aliados, acrescentou:"
-                + " \n Não queremos os Greyjoys como inimigos. Precisamos chegar a um acordo com eles, pois o contrário pode ser fatal para a nossa causa.");
+                + " \n - Não queremos os Greyjoys como inimigos. Precisamos chegar a um acordo com eles, pois o contrário pode ser fatal para a nossa causa.");
 
         Console("\n\n Com o passar dos dias, o exército continua se fortalecendo e se preparando para a batalha final."
-                + " \n Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ");
+                + " \n - Enquanto isso, Daenerys partiu com Drogon, seu dragão mais poderoso, para encontrar os Greyjoys nas Ilhas de Ferro, buscando solidificar uma aliança crucial para o sucesso de sua campanha. ");
 
 
                 if (numTerritorios <= 60) {
@@ -462,7 +456,6 @@ public class Jogo {
 
             Scanner entrada = new Scanner(System.in);
             String selected = entrada.nextLine();
-            entrada.close();
 
             switch (selected) {
                 case "a" -> {
@@ -511,6 +504,7 @@ public class Jogo {
         } while (true);
     }
 
+
     static void segundoDesafio() throws Exception {
 
         Console("\n\n\n ATENÇÃO! Seu segundo desafio matemático começará em: \n 3 \n 2 \n 1 \n");
@@ -534,7 +528,6 @@ public class Jogo {
 			}
 
             Scanner entrada = new Scanner(System.in);
-            entrada.close();
 			String selected = entrada.nextLine();
 
 			switch (selected) {
@@ -788,7 +781,7 @@ public class Jogo {
     
     public static void desafioFinalI() throws Exception {
 
-        Console("Agora, o último desafio!\n Será que você será capaz?\n \n");
+        Console("\n Agora, o último desafio!\n Será que você será capaz?\n \n");
 
         Console("\n Seu placar: " + numTerritorios);
         
@@ -810,38 +803,27 @@ public class Jogo {
             
             Scanner entrada = new Scanner(System.in);
             String selected = entrada.nextLine();
-            entrada.close();
 
             switch (selected) {
                 case "a" -> {
                     if (alternativas.get(0).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
                 case "b" -> {
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
                 case "c" -> {
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
                 case "d" -> {
@@ -849,22 +831,14 @@ public class Jogo {
                     if (alternativas.get(3).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
                 case "e" -> {
                     if (alternativas.get(4).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
             }
@@ -878,7 +852,7 @@ public class Jogo {
     
     public static void desafioFinalII() throws Exception {
     
-        Console("Agora, o último desafio!\n Será que você será capaz? \n \n");
+        Console("\n Agora, o último desafio!\n Será que você será capaz? \n \n");
 
         Console("\n Seu placar: " + numTerritorios);
     
@@ -900,60 +874,39 @@ public class Jogo {
     
             Scanner entrada = new Scanner(System.in);
             String selected = entrada.nextLine();
-            entrada.close();
 
             switch (selected) {
                 case "a" -> {
                     if (alternativas.get(0).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-                    }else {
-                        numTerritorios -= 10;
                     }
                 }
                 case "b" -> {
                     if (alternativas.get(1).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else{
-                        numTerritorios -= 10;
                     }
                 }
                 case "c" -> {
                     if (alternativas.get(2).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else{
-                        numTerritorios -= 10;
                     }
                 }
                 case "d" -> {
                     if (alternativas.get(3).equals(respostaCerta)) {
     
                         System.out.println("Resposta correta");
-                        numTerritorios += 30;
                         return;
-    
-                    }else{
-                        numTerritorios -= 10;
                     }
                 }
                 case "e" -> {
                     if (alternativas.get(4).equals(respostaCerta)) {
                         System.out.println("Resposta correta");
-
-                        numTerritorios += 30;
                         return;
-    
-                    }else{
-                        numTerritorios -= 10;
                     }
                 }
             }
@@ -979,7 +932,6 @@ public class Jogo {
 
             Scanner entrada = new Scanner(System.in);
             escolha_menu = entrada.nextInt();
-            entrada.close();
 
             if (escolha_menu == 2) {
                 menu();
@@ -1000,7 +952,6 @@ public class Jogo {
 
             Scanner entrada = new Scanner(System.in);
             escolhaMenu = entrada.nextInt();
-            entrada.close();
 
             if (escolhaMenu == 2) {
                 menu();
@@ -1016,7 +967,7 @@ public class Jogo {
     public static void Console(String mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
             System.out.print(caractere);
-            TimeUnit.MILLISECONDS.sleep(10);
+            TimeUnit.MILLISECONDS.sleep(5);
         }
     }
 }
